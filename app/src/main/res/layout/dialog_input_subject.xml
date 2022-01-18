@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/edt_firooze"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:ignore="HardcodedText" >
+
+    <TextView
+        android:id="@+id/txtMessage1"
+        style="@style/MessageTextView"
+        android:text="پیغام برنامه" />
+
+    <EditText
+        android:id="@+id/edtInputDecision"
+        style="@style/EditTextCustomized"
+        android:hint="موضوع تصمیم گیری" >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout style="@style/ButtonLayout" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/YesNoButton"
+            android:text="لغو" />
+
+        <Button
+            android:id="@+id/btnOk"
+            style="@style/YesNoButton"
+            android:text="تایید" />
+    </LinearLayout>
+
+</LinearLayout>

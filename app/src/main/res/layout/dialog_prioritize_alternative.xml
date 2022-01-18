@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    style="@style/MessageScrollBar"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout style="@style/MessageLayout" >
+
+        <TextView
+            android:id="@+id/txtMessage3"
+            style="@style/MessageTextView"
+            android:text="پیغام برنامه" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ir.parka.decision.ViewAlternativeComp
+                android:id="@+id/viewAlternativeComp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+            </ir.parka.decision.ViewAlternativeComp>
+
+            <ir.parka.decision.ViewAlternativeComp
+                android:id="@+id/viewAlternativeComp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+            </ir.parka.decision.ViewAlternativeComp>
+
+            <ir.parka.decision.ViewAlternativeComp
+                android:id="@+id/viewAlternativeComp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+            </ir.parka.decision.ViewAlternativeComp>
+
+            <ir.parka.decision.ViewAlternativeComp
+                android:id="@+id/viewAlternativeComp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+            </ir.parka.decision.ViewAlternativeComp>
+
+            <ir.parka.decision.ViewAlternativeComp
+                android:id="@+id/viewAlternativeComp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+            </ir.parka.decision.ViewAlternativeComp>
+        </LinearLayout>
+
+        <LinearLayout style="@style/ButtonLayout" >
+
+            <Button
+                android:id="@+id/btnCancel3"
+                style="@style/YesNoButton"
+                android:text="پاک شود" />
+
+            <Button
+                android:id="@+id/btnOk3"
+                style="@style/YesNoButton"
+                android:text="تایید" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

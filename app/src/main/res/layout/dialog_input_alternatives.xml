@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    style="@style/MessageScrollBar"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout style="@style/MessageLayout" >
+
+        <TextView
+            android:id="@+id/txtMessage2"
+            style="@style/MessageTextView"
+            android:text="پیغام برنامه" />
+
+        <EditText
+            android:id="@+id/edtAlternative1"
+            style="@style/EditTextCustomized"
+            android:hint="گزینه اول" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/edtAlternative2"
+            style="@style/EditTextCustomized"
+            android:hint="گزینه دوم" />
+
+        <EditText
+            android:id="@+id/edtAlternative3"
+            style="@style/EditTextCustomized"
+            android:hint="گزینه سوم" />
+
+        <EditText
+            android:id="@+id/edtAlternative4"
+            style="@style/EditTextCustomized"
+            android:hint="گزینه چهارم"
+            android:padding="6dp" />
+
+        <EditText
+            android:id="@+id/edtAlternative5"
+            style="@style/EditTextCustomized"
+            android:hint="گزینه پنجم" />
+
+        <LinearLayout style="@style/ButtonLayout" >
+
+            <Button
+                android:id="@+id/btnCancel1"
+                style="@style/YesNoButton"
+                android:text="پاک شود" />
+
+            <Button
+                android:id="@+id/btnOK1"
+                style="@style/YesNoButton"
+                android:text="تایید" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="4dip"
+    android:scrollbarThumbVertical="@drawable/scrll_orange"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_helpsubj1"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/shp_shakespeare"
+            android:gravity="center"
+            android:text="چرا به تصمیم نیاز داریم؟"
+            android:textSize="18sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help00"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help01"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help02"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help03"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help04"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help05"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help06"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help07"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help08"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_help09"
+            style="@style/HelpTextBlack" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="4dip"
+    android:scrollbarThumbVertical="@drawable/scrll_orange"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_FAQsubj1"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/shp_shakespeare"
+            android:gravity="center"
+            android:text="ورودی‌های برنامه"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput1"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="در چه موردی می‌خواهید تصمیم‌گیری کنید؟"
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ00"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput2"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="قرار است بین چه گزینه‌هایی تصمیم‌گیری انجام شود؟"
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ01"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput3"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="در این تصمیم گیری چه پارامترهایی موثر هستند؟"
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ02"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput4"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟"
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ03"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput5"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="در میان پارامترهای موثر، کدامیک مهم تر هستند؟"
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ04"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput6"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="محاسبه کن!"
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ05"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput7"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="پاک شود"
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ06"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQsubj2"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/shp_shakespeare"
+            android:gravity="center"
+            android:text="پیغام‌های برنامه"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txt_FAQinput8"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/cab_background_top_decision"
+            android:gravity="center"
+            android:text="لطفاً ورودی‌های برنامه را کامل کنید."
+            android:textSize="16sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ07"
+            style="@style/HelpTextBlack" />
+
+        <TextView
+            android:id="@+id/txt_FAQsubj3"
+            style="@style/HelpTextBlack"
+            android:layout_width="match_parent"
+            android:background="@drawable/shp_shakespeare"
+            android:gravity="center"
+            android:text="مثال کاربردی"
+            android:textSize="18sp" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ08"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ09"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ10"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ11"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ12"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ13"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ14"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ15"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ16"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ17"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ18"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ19"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ20"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ21"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ22"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ23"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ24"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ25"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ26"
+            style="@style/HelpTextBlack" />
+
+        <ir.noghteh.JustifiedTextView
+            xmlns:noghteh="http://noghteh.ir"
+            android:id="@+id/txt_FAQ27"
+            style="@style/HelpTextBlack" />
+    </LinearLayout>
+
+</ScrollView>

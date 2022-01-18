@@ -1,0 +1,103 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:padding="4dp"
+    android:scrollbarSize="4dip"
+    android:scrollbarThumbVertical="@drawable/scrll_orange"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnQ_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_shakespeare"
+            android:padding="4dp"
+            android:text="در چه موردی می‌خواهید تصمیم‌گیری کنید؟"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnQ_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_shakespeare"
+            android:padding="4dp"
+            android:text="قرار است بین چه گزینه‌هایی تصمیم گیری انجام شود؟"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnQ_3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_shakespeare"
+            android:padding="4dp"
+            android:text="در این تصمیم‌گیری چه پارامترهایی موثر هستند؟"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnQ_4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_shakespeare"
+            android:padding="4dp"
+            android:text="از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnQ_5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/btn_shakespeare"
+            android:padding="4dp"
+            android:text="در میان پارامترهای موثر، کدامیک مهم‌تر هستند؟"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_beige"
+                android:padding="4dp"
+                android:text="پاک شود"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnCompute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/btn_beige"
+                android:padding="4dp"
+                android:text="محاسبه کن!"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

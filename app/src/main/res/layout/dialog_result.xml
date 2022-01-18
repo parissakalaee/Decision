@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    style="@style/MessageScrollBar"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edt_firooze"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_output"
+            style="@style/MessageTextView" />
+
+        <LinearLayout
+            android:id="@+id/lyt_result1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/edt_white_orange"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/txt_percentage1"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_result1"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_number1"
+                style="@style/ResultTextBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_result2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/edt_white_orange"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/txt_percentage2"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_result2"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_number2"
+                style="@style/ResultTextBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_result3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/edt_white_orange"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/txt_percentage3"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_result3"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_number3"
+                style="@style/ResultTextBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_result4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/edt_white_orange"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/txt_percentage4"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_result4"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_number4"
+                style="@style/ResultTextBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_result5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/edt_white_orange"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/txt_percentage5"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_result5"
+                style="@style/ResultTextBlack" />
+
+            <TextView
+                android:id="@+id/txt_number5"
+                style="@style/ResultTextBlack" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/ButtonLayout" >
+
+            <Button
+                android:id="@+id/btnOk5"
+                style="@style/YesNoButton"
+                android:text="باشه" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

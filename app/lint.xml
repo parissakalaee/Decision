@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lint>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/custom_spinner.xml" />
+        <ignore path="res/layout/popupwindow.xml" />
+    </issue>
+</lint>
