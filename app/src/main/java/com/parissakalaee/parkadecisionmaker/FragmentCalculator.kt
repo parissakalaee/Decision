@@ -1,4 +1,4 @@
-package ir.parka.decision
+package com.parissakalaee.parkadecisionmaker
 
 import android.app.Dialog
 import android.graphics.Typeface
@@ -392,7 +392,7 @@ class FragmentCalculator() : Fragment() {
                     alternativePriorityValue[i][j] = viewAlternativeComp[i].getMyAlternativeItem()[j]
                     val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
                     prefsEditor.putInt(
-                        ViewAlternativeComp.Companion.spinnerAlterSelection.get(i).get(j),
+                        ViewAlternativeComp.spinnerAlterSelection.get(i).get(j),
                         (5 - alternativePriorityValue[i][j]).toInt()
                     ).commit()
                 }
@@ -403,7 +403,7 @@ class FragmentCalculator() : Fragment() {
             override fun onClick(arg0: View) {
                 val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
                 for (i in 0..4) for (j in 0..4) prefsEditor.remove(
-                    ViewAlternativeComp.Companion.spinnerAlterSelection.get(
+                    ViewAlternativeComp.spinnerAlterSelection.get(
                         i
                     ).get(j)
                 ).commit()
@@ -475,25 +475,25 @@ class FragmentCalculator() : Fragment() {
                         val prefsEditor =
                             PreferenceManager.getDefaultSharedPreferences(activity).edit()
                         if (parameterPriorityValue[i][j] == 1.toDouble() / 5.0) prefsEditor.putInt(
-                            ViewParameterComp.Companion.spinnerParamSelection.get(cnt),
+                            ViewParameterComp.spinnerParamSelection.get(cnt),
                             0
                         ).commit()
                         if (parameterPriorityValue[i][j] == 1.toDouble() / 3.0) prefsEditor.putInt(
-                            ViewParameterComp.Companion.spinnerParamSelection.get(cnt),
+                            ViewParameterComp.spinnerParamSelection.get(cnt),
                             1
                         ).commit()
                         if (parameterPriorityValue[i][j] == 1.0) prefsEditor.putInt(
-                            ViewParameterComp.Companion.spinnerParamSelection.get(
+                            ViewParameterComp.spinnerParamSelection.get(
                                 cnt
                             ), 2
                         ).commit()
                         if (parameterPriorityValue[i][j] == 3.0) prefsEditor.putInt(
-                            ViewParameterComp.Companion.spinnerParamSelection.get(
+                            ViewParameterComp.spinnerParamSelection.get(
                                 cnt
                             ), 3
                         ).commit()
                         if (parameterPriorityValue[i][j] == 5.0) prefsEditor.putInt(
-                            ViewParameterComp.Companion.spinnerParamSelection.get(
+                            ViewParameterComp.spinnerParamSelection.get(
                                 cnt
                             ), 4
                         ).commit()
@@ -508,7 +508,7 @@ class FragmentCalculator() : Fragment() {
             override fun onClick(arg0: View) {
                 val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
                 for (i in 0 until 2 * ARRAY_SIZE) {
-                    prefsEditor.remove(ViewParameterComp.Companion.spinnerParamSelection.get(i))
+                    prefsEditor.remove(ViewParameterComp.spinnerParamSelection.get(i))
                         .commit()
                     viewParameterComp[i]!!.clearID(i)
                 }
@@ -523,7 +523,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun resultDialog(index: IntArray, maxResult: DoubleArray, sum: Double) {
-        val dialog = Dialog((G.Companion.currentActivity)!!)
+        val dialog = Dialog((G.currentActivity)!!)
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_result)
         val txt_numberfont = Typeface.createFromAsset(requireActivity().assets, "font.ttf")

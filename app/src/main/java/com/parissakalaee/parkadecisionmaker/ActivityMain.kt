@@ -1,4 +1,4 @@
-package ir.parka.decision
+package com.parissakalaee.parkadecisionmaker
 
 import android.content.Intent
 import android.graphics.Color
@@ -18,14 +18,14 @@ class ActivityMain : ActivityEnhancedActionBar() {
     override fun onBackPressed() {
         if (back_pressed + 2000 > System.currentTimeMillis()) {
             super.onBackPressed()
-            G.Companion.currentActivity!!.finish()
+            G.currentActivity!!.finish()
             val intent = Intent(Intent.ACTION_MAIN)
             intent.addCategory(Intent.CATEGORY_HOME)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            G.Companion.currentActivity!!.startActivity(intent)
+            G.currentActivity!!.startActivity(intent)
             System.exit(0)
         } else Toast.makeText(
-            G.Companion.context,
+            G.context,
             "جهت خروج کلید بازگشت را مجدداً بفشارید",
             Toast.LENGTH_LONG
         ).show()

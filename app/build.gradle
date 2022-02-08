@@ -6,7 +6,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "ir.parka.decision"
+        applicationId "com.parissakalaee.parkadecisionmaker"
         minSdkVersion 17
         targetSdkVersion 32
     }

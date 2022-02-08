@@ -1,4 +1,4 @@
-package ir.parka.decision
+package com.parissakalaee.parkadecisionmaker
 
 import android.app.Dialog
 import android.content.Intent
@@ -16,13 +16,13 @@ import ir.noghteh.JustifiedTextView
 abstract class ActivityEnhancedActionBar constructor() : AppCompatActivity(),
     PopupMenu.OnMenuItemClickListener {
     override fun onPause() {
-        Log.i(G.Companion.LOG_TAG, "Pause from " + javaClass.getSimpleName() + " activity")
+        Log.i(G.LOG_TAG, "Pause from " + javaClass.getSimpleName() + " activity")
         super.onPause()
     }
 
     override fun onResume() {
-        Log.i(G.Companion.LOG_TAG, "Resume from " + javaClass.getSimpleName() + " activity")
-        G.Companion.currentActivity = this
+        Log.i(G.LOG_TAG, "Resume from " + javaClass.getSimpleName() + " activity")
+        G.currentActivity = this
         super.onResume()
     }
 
@@ -37,11 +37,11 @@ abstract class ActivityEnhancedActionBar constructor() : AppCompatActivity(),
                 when (item.getItemId()) {
                     R.id.menu_feedback -> aboutDialog()
                     R.id.menu_close -> {
-                        G.Companion.currentActivity!!.finish()
+                        G.currentActivity!!.finish()
                         val intent: Intent = Intent(Intent.ACTION_MAIN)
                         intent.addCategory(Intent.CATEGORY_HOME)
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        G.Companion.currentActivity!!.startActivity(intent)
+                        G.currentActivity!!.startActivity(intent)
                         System.exit(0)
                     }
                 }
@@ -52,7 +52,7 @@ abstract class ActivityEnhancedActionBar constructor() : AppCompatActivity(),
     }
 
     private fun aboutDialog() {
-        val dialog: Dialog = Dialog((G.Companion.currentActivity)!!)
+        val dialog: Dialog = Dialog((G.currentActivity)!!)
         dialog.getWindow()!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_about)
         val txtAbout: Array<JustifiedTextView?> = arrayOfNulls(3)

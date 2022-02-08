@@ -18,75 +18,75 @@
             android:gravity="center"
             android:orientation="vertical" >
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
 
-            <ir.parka.decision.ViewParameterComp
+            <com.parissakalaee.parkadecisionmaker.ViewParameterComp
                 android:id="@+id/viewParameterComp10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center" >
-            </ir.parka.decision.ViewParameterComp>
+            </com.parissakalaee.parkadecisionmaker.ViewParameterComp>
         </LinearLayout>
 
      <LinearLayout style="@style/ButtonLayout" >

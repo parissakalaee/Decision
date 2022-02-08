@@ -1,4 +1,4 @@
-package ir.parka.decision
+package com.parissakalaee.parkadecisionmaker
 
 import android.content.Context
 import android.preference.PreferenceManager
