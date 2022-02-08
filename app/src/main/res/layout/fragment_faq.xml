@@ -26,7 +26,6 @@
             android:id="@+id/txt_FAQinput1"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="در چه موردی می‌خواهید تصمیم‌گیری کنید؟"
             android:textSize="16sp" />
@@ -40,7 +39,6 @@
             android:id="@+id/txt_FAQinput2"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="قرار است بین چه گزینه‌هایی تصمیم‌گیری انجام شود؟"
             android:textSize="16sp" />
@@ -54,7 +52,6 @@
             android:id="@+id/txt_FAQinput3"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="در این تصمیم گیری چه پارامترهایی موثر هستند؟"
             android:textSize="16sp" />
@@ -68,7 +65,6 @@
             android:id="@+id/txt_FAQinput4"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟"
             android:textSize="16sp" />
@@ -82,7 +78,6 @@
             android:id="@+id/txt_FAQinput5"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="در میان پارامترهای موثر، کدامیک مهم تر هستند؟"
             android:textSize="16sp" />
@@ -96,7 +91,6 @@
             android:id="@+id/txt_FAQinput6"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="محاسبه کن!"
             android:textSize="16sp" />
@@ -110,7 +104,6 @@
             android:id="@+id/txt_FAQinput7"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="پاک شود"
             android:textSize="16sp" />
@@ -133,7 +126,6 @@
             android:id="@+id/txt_FAQinput8"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/cab_background_top_decision"
             android:gravity="center"
             android:text="لطفاً ورودی‌های برنامه را کامل کنید."
             android:textSize="16sp" />
