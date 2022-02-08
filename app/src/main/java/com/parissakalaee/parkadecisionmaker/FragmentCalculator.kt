@@ -208,7 +208,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun inputSubjectDialog(prgMessage: String) {
-        val dialog = Dialog((activity)!!)
+        val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_input_subject)
         val txtMessage1 = dialog.findViewById<View>(R.id.txtMessage1) as TextView
@@ -243,7 +243,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun inputAlternativeDialog(prgMessage: String) {
-        val dialog = Dialog((activity)!!)
+        val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_input_alternatives)
         val txtMessage2 = dialog.findViewById<View>(R.id.txtMessage2) as TextView
@@ -288,7 +288,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun inputParameterDialog(prgMessage: String) {
-        val dialog = Dialog((activity)!!)
+        val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_input_parameters)
         val txtMessage2 = dialog.findViewById<View>(R.id.txtMessage2) as TextView
@@ -337,7 +337,7 @@ class FragmentCalculator() : Fragment() {
 
     private fun prioritizeAlternativeDialog(prgMessage: String) {
         var prgMessage: String? = prgMessage
-        val dialog = Dialog((activity)!!)
+        val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_prioritize_alternative)
         val txtMessage3 = dialog.findViewById<View>(R.id.txtMessage3) as TextView
@@ -421,7 +421,7 @@ class FragmentCalculator() : Fragment() {
 
     private fun prioritizeParameterDialog(prgMessage: String) {
         var prgMessage: String? = prgMessage
-        val dialog = Dialog((activity)!!)
+        val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_prioritize_parameter)
         val txtMessage3 = dialog.findViewById<View>(R.id.txtMessage3) as TextView
