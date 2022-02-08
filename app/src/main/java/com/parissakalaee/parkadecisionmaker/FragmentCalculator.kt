@@ -523,7 +523,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun resultDialog(index: IntArray, maxResult: DoubleArray, sum: Double) {
-        val dialog = Dialog((G.currentActivity)!!)
+        val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_result)
         val txt_numberfont = Typeface.createFromAsset(requireActivity().assets, "font.ttf")
