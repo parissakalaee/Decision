@@ -13,7 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.viewpager.widget.ViewPager
 
-class ActivityMain : ActivityEnhancedActionBar() {
+class MainActivity : ActivityEnhancedActionBar() {
     var back_pressed: Long = 0
     override fun onBackPressed() {
         if (back_pressed + 2000 > System.currentTimeMillis()) {
@@ -36,7 +36,7 @@ class ActivityMain : ActivityEnhancedActionBar() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initilization
+        // Initialization
         val viewPager = findViewById<View>(R.id.pager) as ViewPager
         val myAdapter = PagerAdapter(supportFragmentManager)
         //		PagerTabStrip pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_tab_strip);
