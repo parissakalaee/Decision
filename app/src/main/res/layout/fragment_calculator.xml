@@ -6,8 +6,7 @@
     android:fadeScrollbars="false"
     android:padding="4dp"
     android:scrollbarSize="4dip"
-    android:scrollbarThumbVertical="@drawable/scrll_orange"
-    tools:ignore="HardcodedText" >
+    android:scrollbarThumbVertical="@drawable/scrll_orange">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -93,7 +92,7 @@
                 android:layout_margin="2dp"
                 android:background="@drawable/btn_beige"
                 android:padding="4dp"
-                android:text="محاسبه کن!"
+                android:text="@string/calculate"
                 android:textColor="#000000"
                 android:textSize="14sp" />
         </LinearLayout>

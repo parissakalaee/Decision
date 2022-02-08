@@ -2,8 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
-    style="@style/MessageScrollBar"
-    tools:ignore="HardcodedText,RtlHardcoded" >
+    style="@style/MessageScrollBar">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -29,7 +28,7 @@
         <TextView
             android:id="@+id/txt_about4"
             style="@style/AboutTextBlack"
-            android:text="par4301@yahoo.com"
+            android:text="@string/email_address"
             android:textColor="#0000FF" />
 
         <LinearLayout style="@style/ButtonLayout" >
@@ -39,7 +38,7 @@
                 style="@style/YesNoButton"
                 android:minHeight="36dip"
                 android:minWidth="56dip"
-                android:text="باشه" />
+                android:text="@string/ok" />
 
         </LinearLayout>
     </LinearLayout>

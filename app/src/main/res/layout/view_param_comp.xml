@@ -7,8 +7,7 @@
     android:layout_margin="2dp"
     android:background="@drawable/edt_white_orange"
     android:orientation="vertical"
-    android:padding="4dp"
-    tools:ignore="HardcodedText" >
+    android:padding="4dp" >
 
     <TextView
         android:id="@+id/txtPri1"

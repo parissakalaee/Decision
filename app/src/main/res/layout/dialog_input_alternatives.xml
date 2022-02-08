@@ -2,8 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
-    style="@style/MessageScrollBar"
-    tools:ignore="HardcodedText" >
+    style="@style/MessageScrollBar" >
 
     <LinearLayout style="@style/MessageLayout" >
 
