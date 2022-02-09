@@ -39,9 +39,9 @@ class ViewParameterComp : LinearLayout {
         list.add("بسیار مهم تر از")
         val dataAdapter = ArrayAdapter(
             context,
-            R.layout.custom_spinner_item, list
+            R.layout.item_spinner, list
         )
-        dataAdapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item)
+        dataAdapter.setDropDownViewResource(R.layout.item_spinner_dropdown)
         spinner!!.adapter = dataAdapter
         spinner!!.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(

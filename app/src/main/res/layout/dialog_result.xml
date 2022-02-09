@@ -6,7 +6,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edt_turquoise"
+        android:background="@drawable/shape_bg_edt_aqua"
         android:orientation="vertical" >
 
         <TextView
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="4dp"
-            android:background="@drawable/edt_white_orange"
+            android:background="@drawable/shape_bg_edt_white"
             android:padding="4dp" >
 
             <TextView
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="4dp"
-            android:background="@drawable/edt_white_orange"
+            android:background="@drawable/shape_bg_edt_white"
             android:padding="4dp" >
 
             <TextView
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="4dp"
-            android:background="@drawable/edt_white_orange"
+            android:background="@drawable/shape_bg_edt_white"
             android:padding="4dp" >
 
             <TextView
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="4dp"
-            android:background="@drawable/edt_white_orange"
+            android:background="@drawable/shape_bg_edt_white"
             android:padding="4dp" >
 
             <TextView
@@ -107,7 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="4dp"
-            android:background="@drawable/edt_white_orange"
+            android:background="@drawable/shape_bg_edt_white"
             android:padding="4dp" >
 
             <TextView

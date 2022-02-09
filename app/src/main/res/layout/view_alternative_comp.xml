@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:background="@drawable/edt_white_orange"
+    android:background="@drawable/shape_bg_edt_white"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="6dp" >

@@ -40,9 +40,9 @@ class ViewAlternativeComp : LinearLayout {
         list.add("بد")
         val dataAdapter: ArrayAdapter<String> = ArrayAdapter(
             context,
-            R.layout.custom_spinner_item, list
+            R.layout.item_spinner, list
         )
-        dataAdapter.setDropDownViewResource(R.layout.custom_spinner_dropdown_item)
+        dataAdapter.setDropDownViewResource(R.layout.item_spinner_dropdown)
         spinner[0] = layout.findViewById<View>(R.id.spinner2) as Spinner?
         spinner[1] = layout.findViewById<View>(R.id.spinner3) as Spinner?
         spinner[2] = layout.findViewById<View>(R.id.spinner4) as Spinner?

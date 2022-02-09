@@ -9,13 +9,13 @@
         android:right="8dip"
         android:top="8dip" />
 
-    <stroke
-        android:width="1dip"
-        android:color="#36797f" />
-
     <gradient
-        android:angle="-90"
-        android:endColor="#308d9e"
-        android:startColor="#73c5d3" />
+        android:angle="90"
+        android:centerColor="@color/aqua_12"
+        android:endColor="@color/aqua_25"
+        android:startColor="@color/aqua_25" />
 
+    <stroke
+        android:width="2dip"
+        android:color="@color/spring_green" />
 </shape>

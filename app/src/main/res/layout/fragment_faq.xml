@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:fadeScrollbars="false"
     android:scrollbarSize="4dip"
-    android:scrollbarThumbVertical="@drawable/scrll_orange">
+    android:scrollbarThumbVertical="@drawable/shape_bg_scrollbar">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:id="@+id/txt_FAQsubj1"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/shp_shakespeare"
+            android:background="@drawable/shape_bg_card"
             android:gravity="center"
             android:text="ورودی‌های برنامه"
             android:textSize="18sp" />
@@ -115,7 +115,7 @@
             android:id="@+id/txt_FAQsubj2"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/shp_shakespeare"
+            android:background="@drawable/shape_bg_card"
             android:gravity="center"
             android:text="پیغام‌های برنامه"
             android:textSize="18sp" />
@@ -137,7 +137,7 @@
             android:id="@+id/txt_FAQsubj3"
             style="@style/HelpTextBlack"
             android:layout_width="match_parent"
-            android:background="@drawable/shp_shakespeare"
+            android:background="@drawable/shape_bg_card"
             android:gravity="center"
             android:text="مثال کاربردی"
             android:textSize="18sp" />
