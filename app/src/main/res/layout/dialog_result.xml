@@ -129,7 +129,7 @@
             <Button
                 android:id="@+id/btnOk5"
                 style="@style/YesNoButton"
-                android:text="باشه" />
+                android:text="@string/action_ok" />
         </LinearLayout>
     </LinearLayout>
 

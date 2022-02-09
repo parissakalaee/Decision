@@ -2,8 +2,27 @@
 <resources>
 
     <string name="app_name">ParkaDecisionMaker</string>
-    <string name="email_address" translatable="false">parissa.kalaee@gmail.com</string>
-    <string name="ok">ok</string>
-    <string name="calculate">Calculate</string>
+    <string name="label_email_address" translatable="false">parissa.kalaee@gmail.com</string>
+    <string name="action_ok">OK</string>
+    <string name="action_calculate">Calculate</string>
+    <string name="label_lorem_ipsum">Lorem Ipsum Holder</string>
+    <string name="hint_alternatives_1">1st Alternative</string>
+    <string name="hint_alternatives_2">2nd Alternative</string>
+    <string name="hint_alternatives_3">3rd Alternative</string>
+    <string name="hint_alternatives_4">4th Alternative</string>
+    <string name="hint_alternatives_5">5th Alternative</string>
+    <string name="action_clear">Clear</string>
+    <string name="hint_criterion_1">1st Criterion</string>
+    <string name="hint_criterion_2">2nd Criterion</string>
+    <string name="hint_criterion_3">3rd Criterion</string>
+    <string name="hint_criterion_4">4th Criterion</string>
+    <string name="hint_criterion_5">5th Criterion</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="hint_decision_subject">Decision Subject</string>
+    <string name="action_decision_subject">در چه موردی می‌خواهید تصمیم‌گیری کنید؟</string>
+    <string name="action_alternatives">قرار است بین چه گزینه‌هایی تصمیم گیری انجام شود؟</string>
+    <string name="action_criteria">در این تصمیم‌گیری چه پارامترهایی موثر هستند؟</string>
+    <string name="action_criteria_alternatives">از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟</string>
+    <string name="action_prioritize_criteria">در میان پارامترهای موثر، کدامیک مهم‌تر هستند؟</string>
 
 </resources>

@@ -20,7 +20,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/btn_shakespeare"
             android:padding="4dp"
-            android:text="در چه موردی می‌خواهید تصمیم‌گیری کنید؟"
+            android:text="@string/action_decision_subject"
             android:textColor="#000000"
             android:textSize="14sp" />
 
@@ -31,7 +31,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/btn_shakespeare"
             android:padding="4dp"
-            android:text="قرار است بین چه گزینه‌هایی تصمیم گیری انجام شود؟"
+            android:text="@string/action_alternatives"
             android:textColor="#000000"
             android:textSize="14sp" />
 
@@ -42,7 +42,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/btn_shakespeare"
             android:padding="4dp"
-            android:text="در این تصمیم‌گیری چه پارامترهایی موثر هستند؟"
+            android:text="@string/action_criteria"
             android:textColor="#000000"
             android:textSize="14sp" />
 
@@ -53,7 +53,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/btn_shakespeare"
             android:padding="4dp"
-            android:text="از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟"
+            android:text="@string/action_criteria_alternatives"
             android:textColor="#000000"
             android:textSize="14sp" />
 
@@ -64,7 +64,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/btn_shakespeare"
             android:padding="4dp"
-            android:text="در میان پارامترهای موثر، کدامیک مهم‌تر هستند؟"
+            android:text="@string/action_prioritize_criteria"
             android:textColor="#000000"
             android:textSize="14sp" />
 
@@ -81,7 +81,7 @@
                 android:layout_margin="2dp"
                 android:background="@drawable/btn_beige"
                 android:padding="4dp"
-                android:text="پاک شود"
+                android:text="@string/action_clear"
                 android:textColor="#000000"
                 android:textSize="14sp" />
 
@@ -92,7 +92,7 @@
                 android:layout_margin="2dp"
                 android:background="@drawable/btn_beige"
                 android:padding="4dp"
-                android:text="@string/calculate"
+                android:text="@string/action_calculate"
                 android:textColor="#000000"
                 android:textSize="14sp" />
         </LinearLayout>

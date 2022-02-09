@@ -9,12 +9,12 @@
         <TextView
             android:id="@+id/txtMessage2"
             style="@style/MessageTextView"
-            android:text="پیغام برنامه" />
+            android:text="@string/label_lorem_ipsum" />
 
         <EditText
             android:id="@+id/edtAlternative1"
             style="@style/EditTextCustomized"
-            android:hint="گزینه اول" >
+            android:hint="@string/hint_alternatives_1" >
 
             <requestFocus />
         </EditText>
@@ -22,35 +22,35 @@
         <EditText
             android:id="@+id/edtAlternative2"
             style="@style/EditTextCustomized"
-            android:hint="گزینه دوم" />
+            android:hint="@string/hint_alternatives_2" />
 
         <EditText
             android:id="@+id/edtAlternative3"
             style="@style/EditTextCustomized"
-            android:hint="گزینه سوم" />
+            android:hint="@string/hint_alternatives_3" />
 
         <EditText
             android:id="@+id/edtAlternative4"
             style="@style/EditTextCustomized"
-            android:hint="گزینه چهارم"
+            android:hint="@string/hint_alternatives_4"
             android:padding="6dp" />
 
         <EditText
             android:id="@+id/edtAlternative5"
             style="@style/EditTextCustomized"
-            android:hint="گزینه پنجم" />
+            android:hint="@string/hint_alternatives_5" />
 
         <LinearLayout style="@style/ButtonLayout" >
 
             <Button
                 android:id="@+id/btnCancel1"
                 style="@style/YesNoButton"
-                android:text="پاک شود" />
+                android:text="@string/action_clear" />
 
             <Button
                 android:id="@+id/btnOK1"
                 style="@style/YesNoButton"
-                android:text="تایید" />
+                android:text="@string/action_ok" />
         </LinearLayout>
     </LinearLayout>
 

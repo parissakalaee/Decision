@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView1"
     style="@style/MessageScrollBar">
 
@@ -11,24 +10,21 @@
         android:orientation="vertical" >
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_about1"
             style="@style/AboutTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_about2"
             style="@style/AboutTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_about3"
             style="@style/AboutTextBlack" />
 
         <TextView
             android:id="@+id/txt_about4"
             style="@style/AboutTextBlack"
-            android:text="@string/email_address"
+            android:text="@string/label_email_address"
             android:textColor="#0000FF" />
 
         <LinearLayout style="@style/ButtonLayout" >
@@ -38,7 +34,7 @@
                 style="@style/YesNoButton"
                 android:minHeight="36dip"
                 android:minWidth="56dip"
-                android:text="@string/ok" />
+                android:text="@string/action_ok" />
 
         </LinearLayout>
     </LinearLayout>
