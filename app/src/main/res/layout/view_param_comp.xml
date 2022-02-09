@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -15,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="مورد اول"
+        android:text="@string/holder_first_item"
         android:textColor="#000000" />
 
     <Spinner
@@ -30,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="مورد دوم"
+        android:text="@string/holder_second_item"
         android:textColor="#000000" />
 
 </LinearLayout>

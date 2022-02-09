@@ -6,7 +6,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/edt_firooze"
+        android:background="@drawable/edt_turquoise"
         android:orientation="vertical" >
 
         <ir.noghteh.JustifiedTextView
@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/txt_about4"
             style="@style/AboutTextBlack"
-            android:text="@string/label_email_address"
+            android:text="@string/msg_email_address"
             android:textColor="#0000FF" />
 
         <LinearLayout style="@style/ButtonLayout" >

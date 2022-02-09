@@ -3,7 +3,7 @@
     <string name="app_name">تصمیم‌گیر پرکا</string>
     <string name="action_ok">تایید</string>
     <string name="action_calculate">محاسبه کن!</string>
-    <string name="label_lorem_ipsum">پیغام برنامه</string>
+    <string name="holder_lorem_ipsum">پیغام برنامه</string>
     <string name="hint_alternatives_1">گزینه اول</string>
     <string name="hint_alternatives_2">گزینه دوم</string>
     <string name="hint_alternatives_3">گزینه سوم</string>
@@ -22,4 +22,9 @@
     <string name="action_criteria">در این تصمیم‌گیری چه پارامترهایی موثر هستند؟</string>
     <string name="action_criteria_alternatives">از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟</string>
     <string name="action_prioritize_criteria">در میان پارامترهای موثر، کدامیک مهم‌تر هستند؟</string>
+    <string name="holder_first_item">مورد اول</string>
+    <string name="holder_second_item">مورد دوم</string>
+    <string name="msg_first_of_sentence">از دیدگاه</string>
+    <string name="holder_middle_section">پول</string>
+    <string name="msg_rest_of_sentence">به گزینه ها امتیاز دهید:</string>
 </resources>
