@@ -31,7 +31,7 @@ class ViewAlternativeComp : LinearLayout {
         }
         val inflator: LayoutInflater =
             context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val layout: View = inflator.inflate(R.layout.view_alternative_comp, this)
+        val layout: View = inflator.inflate(R.layout.view_compare_alternatives, this)
         val list: MutableList<String> = ArrayList()
         list.add("عالی")
         list.add("بسیار خوب")

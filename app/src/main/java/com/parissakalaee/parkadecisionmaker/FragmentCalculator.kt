@@ -210,7 +210,7 @@ class FragmentCalculator() : Fragment() {
     private fun inputSubjectDialog(prgMessage: String) {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_input_subject)
+        dialog.setContentView(R.layout.dialog_get_subject)
         val txtMessage1 = dialog.findViewById<View>(R.id.txtMessage1) as TextView
         txtMessage1.text = prgMessage
         edtInputDecision = dialog.findViewById<View>(R.id.edtInputDecision) as EditText
@@ -245,7 +245,7 @@ class FragmentCalculator() : Fragment() {
     private fun inputAlternativeDialog(prgMessage: String) {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_input_alternatives)
+        dialog.setContentView(R.layout.dialog_get_alternatives)
         val txtMessage2 = dialog.findViewById<View>(R.id.txtMessage2) as TextView
         txtMessage2.text = prgMessage
         edtAlternatives[0] = dialog.findViewById<View>(R.id.edtAlternative1) as EditText
@@ -290,7 +290,7 @@ class FragmentCalculator() : Fragment() {
     private fun inputParameterDialog(prgMessage: String) {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_input_parameters)
+        dialog.setContentView(R.layout.dialog_get_criteria)
         val txtMessage2 = dialog.findViewById<View>(R.id.txtMessage2) as TextView
         txtMessage2.text = prgMessage
         edtParameter[0] = dialog.findViewById<View>(R.id.edtParameter1) as EditText
@@ -423,7 +423,7 @@ class FragmentCalculator() : Fragment() {
         var prgMessage: String? = prgMessage
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_prioritize_parameter)
+        dialog.setContentView(R.layout.dialog_prioritize_criteria)
         val txtMessage3 = dialog.findViewById<View>(R.id.txtMessage3) as TextView
         viewParameterComp[0] =
             dialog.findViewById<View>(R.id.viewParameterComp1) as ViewParameterComp

@@ -9,7 +9,7 @@
         <TextView
             android:id="@+id/txtMessage3"
             style="@style/MessageTextView"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,12 +93,12 @@
             <Button
                 android:id="@+id/btnCancel4"
                 style="@style/YesNoButton"
-                android:text="@string/action_clear" />
+                android:text="@string/all_action_clear" />
 
             <Button
                 android:id="@+id/btnOk4"
                 style="@style/YesNoButton"
-                android:text="@string/action_ok" />
+                android:text="@string/all_action_ok" />
         </LinearLayout>
     </LinearLayout>
 

@@ -29,7 +29,7 @@ class ViewParameterComp : LinearLayout {
             return
         }
         val inflator = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val layout = inflator.inflate(R.layout.view_param_comp, this)
+        val layout = inflator.inflate(R.layout.view_compare_criteria, this)
         spinner = layout.findViewById<View>(R.id.spinner1) as Spinner
         val list: MutableList<String> = ArrayList()
         list.add("بسیار کم اهمیت تر از")

@@ -8,12 +8,12 @@
         <TextView
             android:id="@+id/txtMessage2"
             style="@style/MessageTextView"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
 
         <EditText
             android:id="@+id/edtAlternative1"
             style="@style/EditTextCustomized"
-            android:hint="@string/hint_alternatives_1" >
+            android:hint="@string/get_alternatives_hint_alternatives1" >
 
             <requestFocus />
         </EditText>
@@ -21,35 +21,35 @@
         <EditText
             android:id="@+id/edtAlternative2"
             style="@style/EditTextCustomized"
-            android:hint="@string/hint_alternatives_2" />
+            android:hint="@string/get_alternatives_hint_alternatives2" />
 
         <EditText
             android:id="@+id/edtAlternative3"
             style="@style/EditTextCustomized"
-            android:hint="@string/hint_alternatives_3" />
+            android:hint="@string/get_alternatives_hint_alternatives3" />
 
         <EditText
             android:id="@+id/edtAlternative4"
             style="@style/EditTextCustomized"
-            android:hint="@string/hint_alternatives_4"
+            android:hint="@string/get_alternatives_hint_alternatives4"
             android:padding="6dp" />
 
         <EditText
             android:id="@+id/edtAlternative5"
             style="@style/EditTextCustomized"
-            android:hint="@string/hint_alternatives_5" />
+            android:hint="@string/get_alternatives_hint_alternatives5" />
 
         <LinearLayout style="@style/ButtonLayout" >
 
             <Button
                 android:id="@+id/btnCancel1"
                 style="@style/YesNoButton"
-                android:text="@string/action_clear" />
+                android:text="@string/all_action_clear" />
 
             <Button
                 android:id="@+id/btnOK1"
                 style="@style/YesNoButton"
-                android:text="@string/action_ok" />
+                android:text="@string/all_action_ok" />
         </LinearLayout>
     </LinearLayout>
 

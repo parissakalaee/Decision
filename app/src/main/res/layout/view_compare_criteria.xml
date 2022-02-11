@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="@string/holder_first_item"
+        android:text="@string/compare_criteria_holder_item1"
         android:textColor="@color/black" />
 
     <Spinner
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="@string/holder_second_item"
+        android:text="@string/compare_criteria_holder_item2"
         android:textColor="@color/black" />
 
 </LinearLayout>

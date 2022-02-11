@@ -24,7 +24,7 @@
         <TextView
             android:id="@+id/txt_about4"
             style="@style/AboutTextBlack"
-            android:text="@string/msg_email_address"
+            android:text="@string/all_msg_email_address"
             android:textColor="@color/blue" />
 
         <LinearLayout style="@style/ButtonLayout" >
@@ -34,7 +34,7 @@
                 style="@style/YesNoButton"
                 android:minHeight="36dip"
                 android:minWidth="56dip"
-                android:text="@string/action_ok" />
+                android:text="@string/all_action_ok" />
 
         </LinearLayout>
     </LinearLayout>

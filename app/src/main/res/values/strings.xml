@@ -1,33 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
+    <string name="all_action_clear">Clear</string>
+    <string name="all_action_ok">OK</string>
+    <string name="all_holder_lorem_ipsum">Lorem Ipsum Holder</string>
+    <string name="all_msg_email_address" translatable="false">parissa.kalaee@gmail.com</string>
 
     <string name="app_name">ParkaDecisionMaker</string>
-    <string name="msg_email_address" translatable="false">parissa.kalaee@gmail.com</string>
-    <string name="action_ok">OK</string>
-    <string name="action_calculate">Calculate</string>
-    <string name="holder_lorem_ipsum">Lorem Ipsum Holder</string>
-    <string name="hint_alternatives_1">1st Alternative</string>
-    <string name="hint_alternatives_2">2nd Alternative</string>
-    <string name="hint_alternatives_3">3rd Alternative</string>
-    <string name="hint_alternatives_4">4th Alternative</string>
-    <string name="hint_alternatives_5">5th Alternative</string>
-    <string name="action_clear">Clear</string>
-    <string name="hint_criterion_1">1st Criterion</string>
-    <string name="hint_criterion_2">2nd Criterion</string>
-    <string name="hint_criterion_3">3rd Criterion</string>
-    <string name="hint_criterion_4">4th Criterion</string>
-    <string name="hint_criterion_5">5th Criterion</string>
-    <string name="action_cancel">Cancel</string>
-    <string name="hint_decision_subject">Decision Subject</string>
-    <string name="action_decision_subject">در چه موردی می‌خواهید تصمیم‌گیری کنید؟</string>
-    <string name="action_alternatives">قرار است بین چه گزینه‌هایی تصمیم گیری انجام شود؟</string>
-    <string name="action_criteria">در این تصمیم‌گیری چه پارامترهایی موثر هستند؟</string>
-    <string name="action_criteria_alternatives">از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟</string>
-    <string name="action_prioritize_criteria">در میان پارامترهای موثر، کدامیک مهم‌تر هستند؟</string>
-    <string name="holder_first_item">مورد اول</string>
-    <string name="holder_second_item">مورد دوم</string>
-    <string name="msg_first_of_sentence">از دیدگاه</string>
-    <string name="holder_middle_section">پول</string>
-    <string name="msg_rest_of_sentence">به گزینه ها امتیاز دهید:</string>
 
+    <string name="calculator_action_alternatives">قرار است بین چه گزینه‌هایی تصمیم گیری انجام شود؟</string>
+    <string name="calculator_action_calculate">Calculate</string>
+    <string name="calculator_action_criteria">در این تصمیم‌گیری چه پارامترهایی موثر هستند؟</string>
+    <string name="calculator_action_prioritize_alternatives">از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟</string>
+    <string name="calculator_action_prioritize_criteria">در میان پارامترهای موثر، کدامیک مهم‌تر هستند؟</string>
+    <string name="calculator_action_subject">در چه موردی می‌خواهید تصمیم‌گیری کنید؟</string>
+
+    <string name="compare_alternatives_holder_middle">پول</string>
+    <string name="compare_alternatives_msg_beginning">از دیدگاه</string>
+    <string name="compare_alternatives_msg_rest">به گزینه ها امتیاز دهید:</string>
+    <string name="compare_criteria_holder_item1">مورد اول</string>
+    <string name="compare_criteria_holder_item2">مورد دوم</string>
+
+    <string name="get_alternatives_hint_alternatives1">1st Alternative</string>
+    <string name="get_alternatives_hint_alternatives2">2nd Alternative</string>
+    <string name="get_alternatives_hint_alternatives3">3rd Alternative</string>
+    <string name="get_alternatives_hint_alternatives4">4th Alternative</string>
+    <string name="get_alternatives_hint_alternatives5">5th Alternative</string>
+
+    <string name="get_criteria_hint_criterion1">1st Criterion</string>
+    <string name="get_criteria_hint_criterion2">2nd Criterion</string>
+    <string name="get_criteria_hint_criterion3">3rd Criterion</string>
+    <string name="get_criteria_hint_criterion4">4th Criterion</string>
+    <string name="get_criteria_hint_criterion5">5th Criterion</string>
+
+    <string name="get_subject_action_cancel">Cancel</string>
+    <string name="get_subject_hint_subject">Decision Subject</string>
 </resources>

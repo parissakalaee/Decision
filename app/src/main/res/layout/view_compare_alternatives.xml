@@ -17,19 +17,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/msg_rest_of_sentence" />
+            android:text="@string/compare_alternatives_msg_rest" />
 
         <TextView
             android:id="@+id/txtParameter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
 
         <TextView
             android:id="@+id/TextView04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/msg_first_of_sentence" />
+            android:text="@string/compare_alternatives_msg_beginning" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
 
     </LinearLayout>
 
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
     </LinearLayout>
 
     <LinearLayout
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
     </LinearLayout>
 
     <LinearLayout
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="0.5"
-            android:text="@string/holder_lorem_ipsum" />
+            android:text="@string/all_holder_lorem_ipsum" />
     </LinearLayout>
 
 </LinearLayout>

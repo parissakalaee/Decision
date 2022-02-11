@@ -128,7 +128,7 @@
             <Button
                 android:id="@+id/btnOk5"
                 style="@style/YesNoButton"
-                android:text="@string/action_ok" />
+                android:text="@string/all_action_ok" />
         </LinearLayout>
     </LinearLayout>
 

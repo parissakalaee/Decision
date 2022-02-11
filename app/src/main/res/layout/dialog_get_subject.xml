@@ -12,12 +12,12 @@
     <TextView
         android:id="@+id/txtMessage1"
         style="@style/MessageTextView"
-        android:text="@string/holder_lorem_ipsum" />
+        android:text="@string/all_holder_lorem_ipsum" />
 
     <EditText
         android:id="@+id/edtInputDecision"
         style="@style/EditTextCustomized"
-        android:hint="@string/hint_decision_subject" >
+        android:hint="@string/get_subject_hint_subject" >
 
         <requestFocus />
     </EditText>
@@ -27,12 +27,12 @@
         <Button
             android:id="@+id/btnCancel"
             style="@style/YesNoButton"
-            android:text="@string/action_cancel" />
+            android:text="@string/get_subject_action_cancel" />
 
         <Button
             android:id="@+id/btnOk"
             style="@style/YesNoButton"
-            android:text="@string/action_ok" />
+            android:text="@string/all_action_ok" />
     </LinearLayout>
 
 </LinearLayout>
