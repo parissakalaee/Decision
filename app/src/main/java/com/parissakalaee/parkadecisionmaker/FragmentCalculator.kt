@@ -10,8 +10,10 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.*
 import androidx.fragment.app.Fragment
+import java.util.*
 
 class FragmentCalculator() : Fragment() {
+    lateinit var diceImage: ImageView
     var inputDecisionValue = ""
     var parameterValue = arrayOf("", "", "", "", "")
     var alternativeValue = arrayOf("", "", "", "", "")
@@ -34,6 +36,8 @@ class FragmentCalculator() : Fragment() {
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_calculator, container, false)
         val txt_font = Typeface.createFromAsset(requireActivity().assets, "BZar_bold.ttf")
+
+        diceImage = rootView.findViewById(R.id.dice_image)
         btnQ[0] = rootView.findViewById<View>(R.id.btnQ_1) as Button
         btnQ[1] = rootView.findViewById<View>(R.id.btnQ_2) as Button
         btnQ[2] = rootView.findViewById<View>(R.id.btnQ_3) as Button
@@ -48,7 +52,9 @@ class FragmentCalculator() : Fragment() {
         for (i in 0..4) btnQ[i]!!.setTypeface(txt_font)
         btnCompute!!.setTypeface(txt_font)
         btnReset!!.setTypeface(txt_font)
-        btnQ[0]!!.setOnClickListener(View.OnClickListener { inputSubjectDialog("لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) ") })
+        btnQ[0]!!.setOnClickListener(View.OnClickListener {
+                inputSubjectDialog("لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) ")
+        })
         btnQ[1]!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
                 inputAlternativeDialog("لطفاً گزینه‌های موجود در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: همدان، اصفهان....)")
@@ -207,7 +213,21 @@ class FragmentCalculator() : Fragment() {
         return rootView
     }
 
+    private fun rollDice() {
+        val randomInt = Random().nextInt(6) + 1
+        val drawableResource = when (randomInt) {
+            1 -> R.drawable.vector_dice_1
+            2 -> R.drawable.vector_dice_2
+            3 -> R.drawable.vector_dice_3
+            4 -> R.drawable.vector_dice_4
+            5 -> R.drawable.vector_dice_5
+            else -> R.drawable.vector_dice_6
+        }
+        diceImage.setImageResource(drawableResource)
+    }
+
     private fun inputSubjectDialog(prgMessage: String) {
+        rollDice()
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_get_subject)
@@ -243,6 +263,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun inputAlternativeDialog(prgMessage: String) {
+        rollDice()
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_get_alternatives)
@@ -288,6 +309,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun inputParameterDialog(prgMessage: String) {
+        rollDice()
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_get_criteria)
@@ -336,6 +358,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun prioritizeAlternativeDialog(prgMessage: String) {
+        rollDice()
         var prgMessage: String? = prgMessage
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
@@ -420,6 +443,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun prioritizeParameterDialog(prgMessage: String) {
+        rollDice()
         var prgMessage: String? = prgMessage
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
