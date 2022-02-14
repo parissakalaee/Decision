@@ -14,6 +14,9 @@ import java.util.*
 
 class FragmentCalculator() : Fragment() {
     lateinit var diceImage: ImageView
+    lateinit var btnCompute: Button
+    lateinit var btnReset: Button
+    lateinit var edtInputDecision: EditText
     var inputDecisionValue = ""
     var parameterValue = arrayOf("", "", "", "", "")
     var alternativeValue = arrayOf("", "", "", "", "")
@@ -24,10 +27,8 @@ class FragmentCalculator() : Fragment() {
     var myParameterPriorityValue = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
     var edtParameter = arrayOfNulls<EditText>(ARRAY_SIZE)
     var edtAlternatives = arrayOfNulls<EditText>(ARRAY_SIZE)
-    var edtInputDecision: EditText? = null
+
     var btnQ = arrayOfNulls<Button>(ARRAY_SIZE)
-    var btnCompute: Button? = null
-    var btnReset: Button? = null
     var inputParam = arrayOf("param0", "param1", "param2", "param3", "param4")
     var inputAlter = arrayOf("alter0", "alter1", "alter2", "alter3", "alter4")
     override fun onCreateView(
