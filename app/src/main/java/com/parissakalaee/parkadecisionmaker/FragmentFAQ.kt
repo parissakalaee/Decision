@@ -16,7 +16,6 @@ class FragmentFAQ : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_faq, container, false)
-        val txt_font = Typeface.createFromAsset(requireActivity().assets, "BZar_bold.ttf")
         val txtFAQ = arrayOfNulls<JustifiedTextView>(28)
         txtFAQ[0] = rootView.findViewById<View>(R.id.txt_FAQ00) as JustifiedTextView
         txtFAQ[1] = rootView.findViewById<View>(R.id.txt_FAQ01) as JustifiedTextView
@@ -93,7 +92,6 @@ class FragmentFAQ : Fragment() {
         txtFAQ[27]!!.text =
             "وقتی که به این مرحله برسیم، عملاً برنامه به پایان رسیده و باید تصمیم نهایی را اجرا کرد. امیدواریم که در اجرای تصمیم منتخب موفق باشید."
         for (i in 0..27) {
-            txtFAQ[i]!!.typeFace = Typeface.createFromAsset(requireActivity().assets, "BZar.ttf")
             txtFAQ[i]!!.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19f)
             txtFAQ[i]!!.lineSpace = 8
         }
@@ -101,7 +99,6 @@ class FragmentFAQ : Fragment() {
         txtFAQSubject[0] = rootView.findViewById<View>(R.id.txt_FAQsubj1) as TextView
         txtFAQSubject[1] = rootView.findViewById<View>(R.id.txt_FAQsubj2) as TextView
         txtFAQSubject[2] = rootView.findViewById<View>(R.id.txt_FAQsubj3) as TextView
-        for (i in 0..2) txtFAQSubject[i]!!.typeface = txt_font
         val txtFAQInput = arrayOfNulls<TextView>(8)
         txtFAQInput[0] = rootView.findViewById<View>(R.id.txt_FAQinput1) as TextView
         txtFAQInput[1] = rootView.findViewById<View>(R.id.txt_FAQinput2) as TextView
@@ -111,7 +108,6 @@ class FragmentFAQ : Fragment() {
         txtFAQInput[5] = rootView.findViewById<View>(R.id.txt_FAQinput6) as TextView
         txtFAQInput[6] = rootView.findViewById<View>(R.id.txt_FAQinput7) as TextView
         txtFAQInput[7] = rootView.findViewById<View>(R.id.txt_FAQinput8) as TextView
-        for (i in 0..7) txtFAQInput[i]!!.typeface = txt_font
         return rootView
     }
 }

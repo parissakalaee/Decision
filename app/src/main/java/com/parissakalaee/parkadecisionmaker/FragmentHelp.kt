@@ -49,7 +49,6 @@ class FragmentHelp : Fragment() {
         txtHelp[9]!!.text =
             "تلاش شده است  که برنامه کاربردی تصمیم، پاسخ سوالات مطرح‌شده را فراهم کرده و در تصمیم گیری‌های ما، نقش یاوری معتمد را ایفا کند."
         for (i in 0..9) {
-            txtHelp[i]!!.typeFace = Typeface.createFromAsset(requireActivity().assets, "BZar.ttf")
             txtHelp[i]!!.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19f)
             txtHelp[i]!!.lineSpace = 8
         }

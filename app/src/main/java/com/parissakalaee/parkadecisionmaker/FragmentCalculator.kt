@@ -36,7 +36,6 @@ class FragmentCalculator() : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_calculator, container, false)
-        val txt_font = Typeface.createFromAsset(requireActivity().assets, "BZar_bold.ttf")
 
         diceImage = rootView.findViewById(R.id.dice_image)
         btnQ[0] = rootView.findViewById<View>(R.id.btnQ_1) as Button
@@ -47,12 +46,6 @@ class FragmentCalculator() : Fragment() {
         btnCompute = rootView.findViewById<View>(R.id.btnCompute) as Button
         btnReset = rootView.findViewById<View>(R.id.btnReset) as Button
 
-        //		btnQ[3].setEnabled(false);
-        //		btnQ[4].setEnabled(false);
-        //		btnCompute.setEnabled(false);
-        for (i in 0..4) btnQ[i]!!.setTypeface(txt_font)
-        btnCompute!!.setTypeface(txt_font)
-        btnReset!!.setTypeface(txt_font)
         btnQ[0]!!.setOnClickListener(View.OnClickListener {
                 inputSubjectDialog("لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) ")
         })
