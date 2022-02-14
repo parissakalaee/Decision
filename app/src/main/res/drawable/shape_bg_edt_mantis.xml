@@ -4,10 +4,10 @@
     <corners android:radius="4dip" />
 
     <padding
-        android:bottom="8dip"
-        android:left="8dip"
-        android:right="8dip"
-        android:top="8dip" />
+        android:bottom="8dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp" />
 
     <gradient
         android:angle="90"
@@ -16,6 +16,6 @@
         android:startColor="@color/mantis_25" />
 
     <stroke
-        android:width="2dip"
+        android:width="2dp"
         android:color="@color/spring_green" />
 </shape>

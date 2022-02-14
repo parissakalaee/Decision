@@ -19,8 +19,9 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/calculator_desc_dobblesteen"
             app:srcCompat="@drawable/vector_empty_dice"
-            tools:srcCompat="@drawable/vector_dice_1"/>
+            tools:srcCompat="@drawable/vector_dice_1" />
 
         <Button
             android:id="@+id/btnQ_1"
@@ -29,9 +30,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
-            android:text="@string/calculator_action_subject"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:text="@string/calculator_action_subject"/>
 
         <Button
             android:id="@+id/btnQ_2"
@@ -40,9 +39,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
-            android:text="@string/calculator_action_alternatives"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:text="@string/calculator_action_alternatives" />
 
         <Button
             android:id="@+id/btnQ_3"
@@ -51,9 +48,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
-            android:text="@string/calculator_action_criteria"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:text="@string/calculator_action_criteria" />
 
         <Button
             android:id="@+id/btnQ_4"
@@ -62,9 +57,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
-            android:text="@string/calculator_action_prioritize_alternatives"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:text="@string/calculator_action_prioritize_alternatives" />
 
         <Button
             android:id="@+id/btnQ_5"
@@ -73,9 +66,7 @@
             android:layout_margin="2dp"
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
-            android:text="@string/calculator_action_prioritize_criteria"
-            android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:text="@string/calculator_action_prioritize_criteria"/>
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -101,9 +92,7 @@
                 android:layout_margin="2dp"
                 android:background="@drawable/selector_btn_beryl_green"
                 android:padding="4dp"
-                android:text="@string/calculator_action_calculate"
-                android:textColor="@android:color/black"
-                android:textSize="14sp" />
+                android:text="@string/calculator_action_calculate" />
         </LinearLayout>
 
     </LinearLayout>

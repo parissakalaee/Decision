@@ -34,4 +34,5 @@
 
     <string name="get_subject_action_cancel">Cancel</string>
     <string name="get_subject_hint_subject">Decision Subject</string>
+    <string name="calculator_desc_dobblesteen" translatable="false">dobblesteen</string>
 </resources>
