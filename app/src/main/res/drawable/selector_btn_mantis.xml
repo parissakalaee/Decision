@@ -4,23 +4,23 @@
     <item android:state_pressed="true"><shape android:shape="rectangle">
             <corners android:radius="5dip" />
 
-            <stroke android:width="1dip" android:color="@color/atoll" />
+            <stroke android:width="1dip" android:color="@color/mantis" />
 
-            <gradient android:angle="-90" android:endColor="@color/fountain_blue" android:startColor="@color/blue_stone" />
+            <gradient android:angle="-90" android:endColor="@color/mantis" android:startColor="@color/spring_green" />
         </shape></item>
     <item android:state_focused="true"><shape android:shape="rectangle">
             <corners android:radius="5dip" />
 
-            <stroke android:width="1dip" android:color="@color/atoll" />
+            <stroke android:width="1dip" android:color="@color/mantis" />
 
-            <solid android:color="@color/scooter" />
+            <solid android:color="@color/mantis" />
         </shape></item>
     <item android:state_enabled="true"><shape android:shape="rectangle">
             <corners android:radius="5dip" />
 
-            <stroke android:width="1dip" android:color="@color/atoll" />
+            <stroke android:width="1dip" android:color="@color/mantis" />
 
-            <gradient android:angle="-90" android:endColor="@color/scooter" android:startColor="@color/spray" />
+            <gradient android:angle="-90" android:endColor="@color/mantis" android:startColor="@color/mantis_light" />
         </shape></item>
     <item android:state_enabled="false"><shape android:shape="rectangle">
             <corners android:radius="5dip" />

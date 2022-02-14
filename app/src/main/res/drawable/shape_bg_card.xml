@@ -11,11 +11,11 @@
 
     <stroke
         android:width="1dip"
-        android:color="@color/atoll" />
+        android:color="@color/mantis" />
 
     <gradient
         android:angle="-90"
-        android:endColor="@color/scooter"
-        android:startColor="@color/spray" />
+        android:endColor="@color/mantis_light"
+        android:startColor="@color/mantis_dark" />
 
 </shape>

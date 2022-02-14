@@ -22,19 +22,17 @@
     <color name="black">#000000</color>
 
     <color name="dark_golden_rod">#A67B00</color>
-    <color name="atoll">#36797f</color>
-    <color name="scooter">#308d9e</color>
-    <color name="spray">#73c5d3</color>
     <color name="tangerine_yellow">#FFC700</color>
     <color name="spring_green">#8f00ff8f</color>
-    <color name="aqua_25">#3f00ffff</color>
-    <color name="aqua_12">#1f00ffff</color>
+    <color name="mantis_25">#3f78c257</color>
+    <color name="mantis_12">#1f78c257</color>
     <color name="beryl_green">#b7b9ac</color>
     <color name="bud">#a3a890</color>
     <color name="grey_nurse">#d3d5c9</color>
-    <color name="fountain_blue">#58a9b7</color>
-    <color name="blue_stone">#185c60</color>
     <color name="mango_tango">#dd8000</color>
     <color name="canary">#FFFF99</color>
+    <color name="mantis">#78c257</color>
+    <color name="mantis_light">#A8F257</color>
+    <color name="mantis_dark">#38c257</color>
 
 </resources>

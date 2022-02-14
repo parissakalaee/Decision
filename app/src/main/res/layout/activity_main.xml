@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="@color/aqua_25"
+        android:background="@color/mantis_25"
         android:textColor="@color/mango_tango" />
 
 </androidx.viewpager.widget.ViewPager>
