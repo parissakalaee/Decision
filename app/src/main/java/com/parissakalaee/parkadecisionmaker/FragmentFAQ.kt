@@ -1,6 +1,5 @@
 package com.parissakalaee.parkadecisionmaker
 
-import android.graphics.Typeface
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.LayoutInflater

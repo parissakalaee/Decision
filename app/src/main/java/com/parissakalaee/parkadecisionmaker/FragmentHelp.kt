@@ -1,12 +1,10 @@
 package com.parissakalaee.parkadecisionmaker
 
-import android.graphics.Typeface
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import ir.noghteh.JustifiedTextView
 
@@ -16,7 +14,6 @@ class FragmentHelp : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(R.layout.fragment_help, container, false)
-        val txt_font = Typeface.createFromAsset(requireActivity().assets, "BZar_bold.ttf")
         val txtHelp = arrayOfNulls<JustifiedTextView>(10)
         txtHelp[0] = rootView.findViewById<View>(R.id.txt_help00) as JustifiedTextView
         txtHelp[1] = rootView.findViewById<View>(R.id.txt_help01) as JustifiedTextView
@@ -52,8 +49,6 @@ class FragmentHelp : Fragment() {
             txtHelp[i]!!.setTextSize(TypedValue.COMPLEX_UNIT_SP, 19f)
             txtHelp[i]!!.lineSpace = 8
         }
-        val txtHelpSubject = rootView.findViewById<View>(R.id.txt_helpsubj1) as TextView
-        txtHelpSubject.typeface = txt_font
         return rootView
     }
 }

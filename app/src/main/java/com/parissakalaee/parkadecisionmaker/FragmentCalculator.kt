@@ -1,7 +1,6 @@
 package com.parissakalaee.parkadecisionmaker
 
 import android.app.Dialog
-import android.graphics.Typeface
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.LayoutInflater
@@ -544,7 +543,6 @@ class FragmentCalculator() : Fragment() {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_result)
-        val txt_numberfont = Typeface.createFromAsset(requireActivity().assets, "font.ttf")
         val btnOk = dialog.findViewById<View>(R.id.btnOk5) as Button
         val txtResult = arrayOfNulls<TextView>(6)
         val txtNumber = arrayOfNulls<TextView>(5)
@@ -571,10 +569,6 @@ class FragmentCalculator() : Fragment() {
         lytLayoutResult[3] = dialog.findViewById<View>(R.id.lyt_result4) as LinearLayout
         lytLayoutResult[4] = dialog.findViewById<View>(R.id.lyt_result5) as LinearLayout
         txtResult[5] = dialog.findViewById<View>(R.id.txt_output) as TextView
-        for (i in 0..4) {
-            txtNumber[i]!!.setTypeface(txt_numberfont)
-            txtPercentage[i]!!.setTypeface(txt_numberfont)
-        }
         var cnt = 0
         val resultMessage = arrayOf("", "", "", "", "")
         for (i in 0..4) {
