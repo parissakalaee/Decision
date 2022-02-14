@@ -30,7 +30,7 @@
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
             android:text="@string/calculator_action_subject"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:textSize="14sp" />
 
         <Button
@@ -41,7 +41,7 @@
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
             android:text="@string/calculator_action_alternatives"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:textSize="14sp" />
 
         <Button
@@ -52,7 +52,7 @@
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
             android:text="@string/calculator_action_criteria"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:textSize="14sp" />
 
         <Button
@@ -63,7 +63,7 @@
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
             android:text="@string/calculator_action_prioritize_alternatives"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:textSize="14sp" />
 
         <Button
@@ -74,7 +74,7 @@
             android:background="@drawable/selector_btn_mantis"
             android:padding="4dp"
             android:text="@string/calculator_action_prioritize_criteria"
-            android:textColor="@color/black"
+            android:textColor="@android:color/black"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -91,7 +91,7 @@
                 android:background="@drawable/selector_btn_beryl_green"
                 android:padding="4dp"
                 android:text="@string/all_action_clear"
-                android:textColor="@color/black"
+                android:textColor="@android:color/black"
                 android:textSize="14sp" />
 
             <Button
@@ -102,7 +102,7 @@
                 android:background="@drawable/selector_btn_beryl_green"
                 android:padding="4dp"
                 android:text="@string/calculator_action_calculate"
-                android:textColor="@color/black"
+                android:textColor="@android:color/black"
                 android:textSize="14sp" />
         </LinearLayout>
 

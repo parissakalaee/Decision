@@ -25,7 +25,7 @@
     </style>
 
     <style name="HelpTextBlack">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingRight">8dp</item>
@@ -33,7 +33,7 @@
     </style>
 
     <style name="AboutTextBlack">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">8dp</item>
@@ -43,7 +43,7 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">0.33</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">14sp</item>
         <item name="android:padding">6dp</item>
         <item name="android:layout_gravity">center</item>
@@ -78,7 +78,7 @@
         <item name="android:layout_margin">4dp</item>
         <item name="android:gravity">center</item>
         <item name="android:padding">4dp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">14sp</item>
     </style>
 

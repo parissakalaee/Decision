@@ -6,7 +6,7 @@
 
             <stroke android:width="1dip" android:color="@color/mantis" />
 
-            <gradient android:angle="-90" android:endColor="@color/mantis" android:startColor="@color/spring_green" />
+            <gradient android:angle="-90" android:endColor="@color/mantis" android:startColor="@color/mantis_dark" />
         </shape></item>
     <item android:state_focused="true"><shape android:shape="rectangle">
             <corners android:radius="5dip" />

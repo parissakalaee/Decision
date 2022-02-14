@@ -15,7 +15,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/compare_criteria_holder_item1"
-        android:textColor="@color/black" />
+        android:textColor="@android:color/black" />
 
     <Spinner
         android:id="@+id/spinner1"
@@ -30,6 +30,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/compare_criteria_holder_item2"
-        android:textColor="@color/black" />
+        android:textColor="@android:color/black" />
 
 </LinearLayout>

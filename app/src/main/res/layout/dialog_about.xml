@@ -25,7 +25,7 @@
             android:id="@+id/txt_about4"
             style="@style/AboutTextBlack"
             android:text="@string/all_msg_email_address"
-            android:textColor="@color/blue" />
+            android:textColor="@android:color/holo_blue_dark" />
 
         <LinearLayout style="@style/ButtonLayout" >
 
