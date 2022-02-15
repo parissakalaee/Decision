@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView1"
     style="@style/MessageScrollBar">
 
     <LinearLayout style="@style/MessageLayout" >
 
         <TextView
-            android:id="@+id/txtMessage3"
+            android:id="@+id/txtViewDialogPrioritizeCriteria"
             style="@style/MessageTextView"
             android:text="@string/all_holder_lorem_ipsum" />
 
@@ -91,12 +90,12 @@
      <LinearLayout style="@style/ButtonLayout" >
 
             <Button
-                android:id="@+id/btnCancel4"
+                android:id="@+id/btnCancelDialogPrioritizeCriteria"
                 style="@style/YesNoButton"
                 android:text="@string/all_action_clear" />
 
             <Button
-                android:id="@+id/btnOk4"
+                android:id="@+id/btnOkDialogPrioritizeCriteria"
                 style="@style/YesNoButton"
                 android:text="@string/all_action_ok" />
         </LinearLayout>

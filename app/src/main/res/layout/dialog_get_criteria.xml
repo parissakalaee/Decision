@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/scrollView1"
     style="@style/MessageScrollBar">
 
     <LinearLayout style="@style/MessageLayout" >
 
         <TextView
-            android:id="@+id/txtMessage2"
+            android:id="@+id/textViewDialogGetCriteria"
             style="@style/MessageTextView"
             android:text="@string/all_holder_lorem_ipsum" />
 
         <EditText
             android:id="@+id/edtParameter1"
             style="@style/EditTextCustomized"
-            android:hint="@string/get_criteria_hint_criterion1" >
-
-            <requestFocus />
-        </EditText>
+            android:hint="@string/get_criteria_hint_criterion1" />
 
         <EditText
             android:id="@+id/edtParameter2"
@@ -41,12 +37,12 @@
         <LinearLayout style="@style/ButtonLayout" >
 
             <Button
-                android:id="@+id/btnCancel2"
+                android:id="@+id/btnCancelDialogGetCriteria"
                 style="@style/YesNoButton"
                 android:text="@string/all_action_clear" />
 
             <Button
-                android:id="@+id/btnOK2"
+                android:id="@+id/btnOKDialogGetCriteria"
                 style="@style/YesNoButton"
                 android:text="@string/all_action_ok" />
         </LinearLayout>

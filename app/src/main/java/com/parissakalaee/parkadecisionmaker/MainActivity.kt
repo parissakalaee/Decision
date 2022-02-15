@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val viewPager = findViewById<View>(R.id.pager) as ViewPager
+        val viewPager = findViewById<View>(R.id.pagerMain) as ViewPager
         val myAdapter = PagerAdapter(supportFragmentManager)
         viewPager.adapter = myAdapter
         viewPager.currentItem = 1

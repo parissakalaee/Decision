@@ -10,12 +10,12 @@
     android:padding="4dp" >
 
     <TextView
-        android:id="@+id/txtMessage1"
+        android:id="@+id/textViewDialogGetSubject"
         style="@style/MessageTextView"
         android:text="@string/all_holder_lorem_ipsum" />
 
     <EditText
-        android:id="@+id/edtInputDecision"
+        android:id="@+id/edtGetSubject"
         style="@style/EditTextCustomized"
         android:hint="@string/get_subject_hint_subject" >
 
@@ -25,12 +25,12 @@
     <LinearLayout style="@style/ButtonLayout" >
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/btnCancelDialogGetSubject"
             style="@style/YesNoButton"
             android:text="@string/get_subject_action_cancel" />
 
         <Button
-            android:id="@+id/btnOk"
+            android:id="@+id/btnOkDialogGetSubject"
             style="@style/YesNoButton"
             android:text="@string/all_action_ok" />
     </LinearLayout>

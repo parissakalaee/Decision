@@ -9,9 +9,13 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.parissakalaee.parkadecisionmaker.databinding.FragmentCalculatorBinding
 import java.util.*
 
 class FragmentCalculator() : Fragment() {
+    private var _binding: FragmentCalculatorBinding? = null
+    private val binding get() = _binding!!
+
     lateinit var diceImage: ImageView
     lateinit var btnCompute: Button
     lateinit var btnReset: Button
@@ -31,31 +35,33 @@ class FragmentCalculator() : Fragment() {
     var inputParam = arrayOf("param0", "param1", "param2", "param3", "param4")
     var inputAlter = arrayOf("alter0", "alter1", "alter2", "alter3", "alter4")
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_calculator, container, false)
+        _binding = FragmentCalculatorBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-        diceImage = rootView.findViewById(R.id.dice_image)
-        btnQ[0] = rootView.findViewById<View>(R.id.btnQ_1) as Button
-        btnQ[1] = rootView.findViewById<View>(R.id.btnQ_2) as Button
-        btnQ[2] = rootView.findViewById<View>(R.id.btnQ_3) as Button
-        btnQ[3] = rootView.findViewById<View>(R.id.btnQ_4) as Button
-        btnQ[4] = rootView.findViewById<View>(R.id.btnQ_5) as Button
-        btnCompute = rootView.findViewById<View>(R.id.btnCompute) as Button
-        btnReset = rootView.findViewById<View>(R.id.btnReset) as Button
+        diceImage = binding.imageViewDice
+        btnQ[0] = binding.buttonQ1
+        btnQ[1] = binding.buttonQ2
+        btnQ[2] = binding.buttonQ3
+        btnQ[3] = binding.buttonQ4
+        btnQ[4] = binding.buttonQ5
+        btnCompute = binding.buttonCompute
+        btnReset = binding.buttonReset
 
         btnQ[0]!!.setOnClickListener(View.OnClickListener {
-                inputSubjectDialog("لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) ")
+                getSubjectDialog("لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) ")
         })
         btnQ[1]!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
-                inputAlternativeDialog("لطفاً گزینه‌های موجود در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: همدان، اصفهان....)")
+                getAlternativesDialog("لطفاً گزینه‌های موجود در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: همدان، اصفهان....)")
             }
         })
         btnQ[2]!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
-                inputParameterDialog("لطفاً پارامترهای تاثیرگذار در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: هزینه اقامت، مسیر جاده....)")
+                getCriteriaDialog("لطفاً پارامترهای تاثیرگذار در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: هزینه اقامت، مسیر جاده....)")
             }
         })
         btnQ[3]!!.setOnClickListener(object : View.OnClickListener {
@@ -203,7 +209,7 @@ class FragmentCalculator() : Fragment() {
                 }
             }
         })
-        return rootView
+        return view
     }
 
     private fun rollDice() {
@@ -219,19 +225,19 @@ class FragmentCalculator() : Fragment() {
         diceImage.setImageResource(drawableResource)
     }
 
-    private fun inputSubjectDialog(prgMessage: String) {
+    private fun getSubjectDialog(prgMessage: String) {
         rollDice()
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_get_subject)
-        val txtMessage1 = dialog.findViewById<View>(R.id.txtMessage1) as TextView
-        txtMessage1.text = prgMessage
-        edtInputDecision = dialog.findViewById<View>(R.id.edtInputDecision) as EditText
+        val textViewDialogGetSubject = dialog.findViewById<View>(R.id.textViewDialogGetSubject) as TextView
+        textViewDialogGetSubject.text = prgMessage
+        edtInputDecision = dialog.findViewById<View>(R.id.edtGetSubject) as EditText
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(activity)
         val preferenceSubjectValue = sharedPref.getString("subject", null)
         if (preferenceSubjectValue != null) edtInputDecision!!.setText(preferenceSubjectValue)
-        val btnOk = dialog.findViewById<View>(R.id.btnOk) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancel) as Button
+        val btnOk = dialog.findViewById<View>(R.id.btnOkDialogGetSubject) as Button
+        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogGetSubject) as Button
         btnOk.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
                 val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
@@ -255,13 +261,13 @@ class FragmentCalculator() : Fragment() {
         dialog.show()
     }
 
-    private fun inputAlternativeDialog(prgMessage: String) {
+    private fun getAlternativesDialog(prgMessage: String) {
         rollDice()
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_get_alternatives)
-        val txtMessage2 = dialog.findViewById<View>(R.id.txtMessage2) as TextView
-        txtMessage2.text = prgMessage
+        val textViewDialogGetAlternatives = dialog.findViewById<View>(R.id.textViewDialogGetAlternatives) as TextView
+        textViewDialogGetAlternatives.text = prgMessage
         edtAlternatives[0] = dialog.findViewById<View>(R.id.edtAlternative1) as EditText
         edtAlternatives[1] = dialog.findViewById<View>(R.id.edtAlternative2) as EditText
         edtAlternatives[2] = dialog.findViewById<View>(R.id.edtAlternative3) as EditText
@@ -272,8 +278,8 @@ class FragmentCalculator() : Fragment() {
             val preferenceAlterValue = sharedPref.getString(inputAlter[i], null)
             if (preferenceAlterValue != null) edtAlternatives[i]!!.setText(preferenceAlterValue)
         }
-        val btnOk = dialog.findViewById<View>(R.id.btnOK1) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancel1) as Button
+        val btnOk = dialog.findViewById<View>(R.id.btnOKDialogGetAlternatives) as Button
+        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogGetAlternatives) as Button
         btnOk.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
                 val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
@@ -301,13 +307,13 @@ class FragmentCalculator() : Fragment() {
         dialog.show()
     }
 
-    private fun inputParameterDialog(prgMessage: String) {
+    private fun getCriteriaDialog(prgMessage: String) {
         rollDice()
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_get_criteria)
-        val txtMessage2 = dialog.findViewById<View>(R.id.txtMessage2) as TextView
-        txtMessage2.text = prgMessage
+        val textViewDialogGetCriteria = dialog.findViewById<View>(R.id.textViewDialogGetCriteria) as TextView
+        textViewDialogGetCriteria.text = prgMessage
         edtParameter[0] = dialog.findViewById<View>(R.id.edtParameter1) as EditText
         edtParameter[1] = dialog.findViewById<View>(R.id.edtParameter2) as EditText
         edtParameter[2] = dialog.findViewById<View>(R.id.edtParameter3) as EditText
@@ -318,8 +324,8 @@ class FragmentCalculator() : Fragment() {
             val preferenceParamValue = sharedPref.getString(inputParam[i], null)
             if (preferenceParamValue != null) edtParameter[i]!!.setText(preferenceParamValue)
         }
-        val btnOk = dialog.findViewById<View>(R.id.btnOK2) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancel2) as Button
+        val btnOk = dialog.findViewById<View>(R.id.btnOKDialogGetCriteria) as Button
+        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogGetCriteria) as Button
         btnOk.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
                 val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
@@ -355,8 +361,8 @@ class FragmentCalculator() : Fragment() {
         var prgMessage: String? = prgMessage
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_prioritize_alternative)
-        val txtMessage3 = dialog.findViewById<View>(R.id.txtMessage3) as TextView
+        dialog.setContentView(R.layout.dialog_prioritize_alternatives)
+        val textViewDialogPrioritizeAlternatives = dialog.findViewById<View>(R.id.textViewDialogPrioritizeAlternatives) as TextView
         viewAlternativeComp[0] =
             dialog.findViewById<View>(R.id.viewAlternativeComp1) as ViewAlternativeComp
         viewAlternativeComp[1] =
@@ -367,8 +373,8 @@ class FragmentCalculator() : Fragment() {
             dialog.findViewById<View>(R.id.viewAlternativeComp4) as ViewAlternativeComp
         viewAlternativeComp[4] =
             dialog.findViewById<View>(R.id.viewAlternativeComp5) as ViewAlternativeComp
-        val btnOk = dialog.findViewById<View>(R.id.btnOk3) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancel3) as Button
+        val btnOk = dialog.findViewById<View>(R.id.btnOkDialogPrioritizeAlternatives) as Button
+        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogPrioritizeAlternatives) as Button
         for (i in 0 until ARRAY_SIZE) viewAlternativeComp[i]!!.getID(i)
         for (i in 0 until ARRAY_SIZE) viewAlternativeComp[i]!!
             .setAltText(parameterValue[i], alternativeValue)
@@ -401,7 +407,7 @@ class FragmentCalculator() : Fragment() {
                 }
             }
         }
-        txtMessage3.text = prgMessage
+        textViewDialogPrioritizeAlternatives.text = prgMessage
         btnOk.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
                 for (i in 0 until ARRAY_SIZE) for (j in 0 until ARRAY_SIZE) {
@@ -441,7 +447,7 @@ class FragmentCalculator() : Fragment() {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         dialog.setContentView(R.layout.dialog_prioritize_criteria)
-        val txtMessage3 = dialog.findViewById<View>(R.id.txtMessage3) as TextView
+        val txtViewDialogPrioritizeCriteria = dialog.findViewById<View>(R.id.txtViewDialogPrioritizeCriteria) as TextView
         viewParameterComp[0] =
             dialog.findViewById<View>(R.id.viewParameterComp1) as ViewParameterComp
         viewParameterComp[1] =
@@ -462,8 +468,8 @@ class FragmentCalculator() : Fragment() {
             dialog.findViewById<View>(R.id.viewParameterComp9) as ViewParameterComp
         viewParameterComp[9] =
             dialog.findViewById<View>(R.id.viewParameterComp10) as ViewParameterComp
-        val btnOk = dialog.findViewById<View>(R.id.btnOk4) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancel4) as Button
+        val btnOk = dialog.findViewById<View>(R.id.btnOkDialogPrioritizeCriteria) as Button
+        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogPrioritizeCriteria) as Button
         for (i in 0 until 2 * ARRAY_SIZE) viewParameterComp[i]!!.getID(i)
         var cnt = 0
         var jCnt = 0
@@ -482,7 +488,7 @@ class FragmentCalculator() : Fragment() {
                 }
             }
         }
-        txtMessage3.text = prgMessage
+        txtViewDialogPrioritizeCriteria.text = prgMessage
         btnOk.setOnClickListener(object : View.OnClickListener {
             override fun onClick(arg0: View) {
                 var cnt = 0
@@ -568,7 +574,7 @@ class FragmentCalculator() : Fragment() {
         lytLayoutResult[2] = dialog.findViewById<View>(R.id.lyt_result3) as LinearLayout
         lytLayoutResult[3] = dialog.findViewById<View>(R.id.lyt_result4) as LinearLayout
         lytLayoutResult[4] = dialog.findViewById<View>(R.id.lyt_result5) as LinearLayout
-        txtResult[5] = dialog.findViewById<View>(R.id.txt_output) as TextView
+        txtResult[5] = dialog.findViewById<View>(R.id.txtViewResult) as TextView
         var cnt = 0
         val resultMessage = arrayOf("", "", "", "", "")
         for (i in 0..4) {
@@ -599,5 +605,10 @@ class FragmentCalculator() : Fragment() {
 
     companion object {
         const val ARRAY_SIZE = 5
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

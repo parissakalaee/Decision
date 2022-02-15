@@ -1,7 +1,6 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fadeScrollbars="false"
@@ -15,7 +14,7 @@
         android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/dice_image"
+            android:id="@+id/imageViewDice"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
@@ -24,7 +23,7 @@
             tools:srcCompat="@drawable/vector_dice_1" />
 
         <Button
-            android:id="@+id/btnQ_1"
+            android:id="@+id/buttonQ1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -33,7 +32,7 @@
             android:text="@string/calculator_action_subject"/>
 
         <Button
-            android:id="@+id/btnQ_2"
+            android:id="@+id/buttonQ2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -42,7 +41,7 @@
             android:text="@string/calculator_action_alternatives" />
 
         <Button
-            android:id="@+id/btnQ_3"
+            android:id="@+id/buttonQ3"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -51,7 +50,7 @@
             android:text="@string/calculator_action_criteria" />
 
         <Button
-            android:id="@+id/btnQ_4"
+            android:id="@+id/buttonQ4"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
@@ -60,7 +59,7 @@
             android:text="@string/calculator_action_prioritize_alternatives" />
 
         <Button
-            android:id="@+id/btnQ_5"
+            android:id="@+id/buttonQ5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/selector_btn_beryl_green"
@@ -72,14 +71,14 @@
             android:gravity="center" >
 
             <Button
-                android:id="@+id/btnReset"
+                android:id="@+id/buttonReset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:text="@string/all_action_clear" />
 
             <Button
-                android:id="@+id/btnCompute"
+                android:id="@+id/buttonCompute"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
