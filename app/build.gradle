@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 32
@@ -35,5 +36,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation files('libs/justify.jar')
     implementation "androidx.core:core-ktx:1.7.0"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+    kapt "com.android.databinding:compiler:3.1.4"
 }
