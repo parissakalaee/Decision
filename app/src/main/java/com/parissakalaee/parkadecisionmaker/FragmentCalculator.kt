@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.parissakalaee.parkadecisionmaker.databinding.DialogGetSubjectBinding
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentCalculatorBinding
 import java.util.*
 
@@ -202,35 +203,21 @@ class FragmentCalculator() : Fragment() {
     private fun getSubjectDialog(prgMessage: String) {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_get_subject)
-        val textViewDialogGetSubject = dialog.findViewById<View>(R.id.textViewDialogGetSubject) as TextView
-        textViewDialogGetSubject.text = prgMessage
-        edtInputDecision = dialog.findViewById<View>(R.id.edtGetSubject) as EditText
-        val sharedPref = PreferenceManager.getDefaultSharedPreferences(activity)
-        val preferenceSubjectValue = sharedPref.getString("subject", null)
-        if (preferenceSubjectValue != null) edtInputDecision!!.setText(preferenceSubjectValue)
-        val btnOk = dialog.findViewById<View>(R.id.btnOkDialogGetSubject) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogGetSubject) as Button
-        btnOk.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(arg0: View) {
-                val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                if (edtInputDecision!!.text.toString().length > 0) {
-                    inputDecisionValue = edtInputDecision!!.text.toString()
-                } else {
-                    inputDecisionValue = ""
+        val binding: DialogGetSubjectBinding = DialogGetSubjectBinding.inflate(LayoutInflater.from(context))
+        dialog.setContentView(binding.root)
+
+        binding.textViewDialogGetSubject.text = prgMessage
+        binding.btnOkDialogGetSubject.setOnClickListener {
+            inputDecisionValue =
+                binding.edtGetSubject.text.toString().ifEmpty {
+                    ""
                 }
-                prefsEditor.putString("subject", inputDecisionValue).commit()
-                dialog.dismiss()
-            }
-        })
-        btnCancel.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(arg0: View) {
-                val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                edtInputDecision!!.setText("")
-                prefsEditor.remove("subject").commit()
-                inputDecisionValue = ""
-            }
-        })
+            dialog.dismiss()
+        }
+        binding.btnCancelDialogGetSubject.setOnClickListener {
+            binding.edtGetSubject.setText("")
+            inputDecisionValue = ""
+        }
         dialog.show()
     }
 
