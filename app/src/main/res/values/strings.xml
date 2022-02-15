@@ -32,7 +32,7 @@
     <string name="get_criteria_hint_criterion4">4th Criterion</string>
     <string name="get_criteria_hint_criterion5">5th Criterion</string>
 
-    <string name="get_subject_action_cancel">Cancel</string>
     <string name="get_subject_hint_subject">Decision Subject</string>
     <string name="calculator_desc_dobblesteen" translatable="false">dobblesteen</string>
+    <string name="get_subject_dialog_title">Please enter your decision subject, like trip, buying house, …</string>
 </resources>

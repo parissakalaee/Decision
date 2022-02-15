@@ -31,6 +31,6 @@
     <string name="get_criteria_hint_criterion4">پارامتر چهارم</string>
     <string name="get_criteria_hint_criterion5">پارامتر پنجم</string>
 
-    <string name="get_subject_action_cancel">لغو</string>
     <string name="get_subject_hint_subject">موضوع تصمیم گیری</string>
+    <string name="get_subject_dialog_title"><![CDATA[لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) />]]></string>
 </resources>

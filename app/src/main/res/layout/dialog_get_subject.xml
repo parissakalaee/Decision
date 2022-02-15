@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:background="@drawable/shape_bg_edt_mantis"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="4dp" >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="subject"
+            type="com.parissakalaee.parkadecisionmaker.DataModelSubject" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_bg_edt_mantis"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="4dp" >
+    
+        <TextView
+            style="@style/MessageTextView"
+            android:text="@string/get_subject_dialog_title"/>
 
-    <TextView
-        android:id="@+id/textViewDialogGetSubject"
-        style="@style/MessageTextView"
-        android:text="@string/all_holder_lorem_ipsum" />
-
-    <EditText
-        android:id="@+id/edtGetSubject"
-        style="@style/EditTextCustomized"
-        android:hint="@string/get_subject_hint_subject" >
-
-        <requestFocus />
-    </EditText>
-
-    <LinearLayout style="@style/ButtonLayout" >
-
-        <Button
-            android:id="@+id/btnCancelDialogGetSubject"
-            style="@style/YesNoButton"
-            android:text="@string/get_subject_action_cancel" />
-
-        <Button
-            android:id="@+id/btnOkDialogGetSubject"
-            style="@style/YesNoButton"
-            android:text="@string/all_action_ok" />
+        <EditText
+            android:id="@+id/edtGetSubject"
+            style="@style/EditTextCustomized"
+            android:hint="@string/get_subject_hint_subject"
+            android:text="@={subject.name}"/>
+    
+        <LinearLayout style="@style/ButtonLayout" >
+    
+            <Button
+                android:id="@+id/btn_clear_dialog_get_subject"
+                style="@style/YesNoButton"
+                android:text="@string/all_action_clear" />
+    
+            <Button
+                android:id="@+id/btn_ok_dialog_get_subject"
+                style="@style/YesNoButton"
+                android:text="@string/all_action_ok" />
+        </LinearLayout>
+    
     </LinearLayout>
-
-</LinearLayout>
+    </layout>

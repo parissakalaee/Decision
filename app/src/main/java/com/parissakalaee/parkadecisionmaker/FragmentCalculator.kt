@@ -17,7 +17,6 @@ class FragmentCalculator() : Fragment() {
     private var _binding: FragmentCalculatorBinding? = null
     private val binding get() = _binding!!
 
-    lateinit var edtInputDecision: EditText
     var inputDecisionValue = ""
     var parameterValue = arrayOf("", "", "", "", "")
     var alternativeValue = arrayOf("", "", "", "", "")
@@ -40,7 +39,7 @@ class FragmentCalculator() : Fragment() {
 
         binding.buttonQ1.setOnClickListener{
             rollDice()
-            getSubjectDialog("لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) ")
+            getSubjectDialog()
         }
         binding.buttonQ2.setOnClickListener {
             rollDice()
@@ -200,23 +199,25 @@ class FragmentCalculator() : Fragment() {
         binding.imageViewDice.setImageResource(drawableResource)
     }
 
-    private fun getSubjectDialog(prgMessage: String) {
+    private fun getSubjectDialog() {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
         val binding: DialogGetSubjectBinding = DialogGetSubjectBinding.inflate(LayoutInflater.from(context))
         dialog.setContentView(binding.root)
 
-        binding.textViewDialogGetSubject.text = prgMessage
+        val subject = DataModelSubject("")
+        binding.subject = subject
+
         binding.btnOkDialogGetSubject.setOnClickListener {
-            inputDecisionValue =
+            subject.name =
                 binding.edtGetSubject.text.toString().ifEmpty {
                     ""
                 }
             dialog.dismiss()
         }
-        binding.btnCancelDialogGetSubject.setOnClickListener {
+        binding.btnClearDialogGetSubject.setOnClickListener {
             binding.edtGetSubject.setText("")
-            inputDecisionValue = ""
+            subject.name = ""
         }
         dialog.show()
     }
