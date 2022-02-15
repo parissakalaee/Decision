@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="fontFamily">@font/yekan</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textSize">@dimen/textsize_medium</item>
     </style>
 

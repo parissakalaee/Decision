@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#64DD17</color>
+    <color name="colorPrimaryDark">#1FAA00</color>
+    <color name="colorAccent">#FFAB40</color>
+    <color name="windowBackground">#b7b9ac</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="statusBarColor">#FFAB40</color>
+    <color name="navigationBarColor">#FFAB40</color>
 
     <color name="dark_golden_rod">#A67B00</color>
     <color name="dark_golden_rod_40">#66A67B00</color>
     <color name="tangerine_yellow">#FFC700</color>
-    <color name="spring_green">#8f00ff8f</color>
-    <color name="mantis_25">#3f78c257</color>
-    <color name="mantis_12">#1f78c257</color>
     <color name="beryl_green">#b7b9ac</color>
     <color name="bud">#a3a890</color>
     <color name="grey_nurse">#d3d5c9</color>
     <color name="mango_tango">#dd8000</color>
     <color name="canary">#FFFF99</color>
-    <color name="mantis">#78c257</color>
-    <color name="mantis_light">#A8F257</color>
-    <color name="mantis_dark">#38c257</color>
+    <color name="mantis">#64DD17</color>
+    <color name="mantis_light">#9CFF57</color>
+    <color name="mantis_dark">#1FAA00</color>
+    <color name="mantis_25">#3f78c257</color>
+    <color name="mantis_12">#1f78c257</color>
 
 </resources>
