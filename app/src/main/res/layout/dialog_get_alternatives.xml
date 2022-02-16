@@ -1,51 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MessageScrollBar" >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="java.util.ArrayList"/>
+        <variable
+            name="alternatives"
+            type="ArrayList&lt;String&gt;" />
+    </data>
 
-    <LinearLayout style="@style/MessageLayout" >
-        <TextView
-            android:id="@+id/textViewDialogGetAlternatives"
-            style="@style/MessageTextView"
-            android:text="@string/all_holder_lorem_ipsum" />
+    <ScrollView
+        style="@style/MessageScrollBar" >
+        <LinearLayout style="@style/MessageLayout" >
+            <TextView
+                style="@style/MessageTextView"
+                android:text="@string/get_alternatives_dialog_title"/>
 
-        <EditText
-            android:id="@+id/edtAlternative1"
-            style="@style/EditTextCustomized"
-            android:hint="@string/get_alternatives_hint_alternatives1" />
+            <EditText
+                android:id="@+id/edtAlternative1"
+                style="@style/EditTextCustomized"
+                android:hint="@string/get_alternatives_hint_alternatives1"
+                android:text="@={alternatives[0]}"/>
 
-        <EditText
-            android:id="@+id/edtAlternative2"
-            style="@style/EditTextCustomized"
-            android:hint="@string/get_alternatives_hint_alternatives2" />
+            <EditText
+                android:id="@+id/edtAlternative2"
+                style="@style/EditTextCustomized"
+                android:hint="@string/get_alternatives_hint_alternatives2"
+                android:text="@={alternatives[1]}"/>
 
-        <EditText
-            android:id="@+id/edtAlternative3"
-            style="@style/EditTextCustomized"
-            android:hint="@string/get_alternatives_hint_alternatives3" />
+            <EditText
+                android:id="@+id/edtAlternative3"
+                style="@style/EditTextCustomized"
+                android:hint="@string/get_alternatives_hint_alternatives3"
+                android:text="@={alternatives[2]}"/>
 
-        <EditText
-            android:id="@+id/edtAlternative4"
-            style="@style/EditTextCustomized"
-            android:hint="@string/get_alternatives_hint_alternatives4"
-            android:padding="6dp" />
+            <EditText
+                android:id="@+id/edtAlternative4"
+                style="@style/EditTextCustomized"
+                android:hint="@string/get_alternatives_hint_alternatives4"
+                android:text="@={alternatives[3]}"/>
 
-        <EditText
-            android:id="@+id/edtAlternative5"
-            style="@style/EditTextCustomized"
-            android:hint="@string/get_alternatives_hint_alternatives5" />
+            <EditText
+                android:id="@+id/edtAlternative5"
+                style="@style/EditTextCustomized"
+                android:hint="@string/get_alternatives_hint_alternatives5"
+                android:text="@={alternatives[4]}"/>
 
-        <LinearLayout style="@style/ButtonLayout" >
+            <LinearLayout style="@style/ButtonLayout" >
 
-            <Button
-                android:id="@+id/btnCancelDialogGetAlternatives"
-                style="@style/YesNoButton"
-                android:text="@string/all_action_clear" />
+                <Button
+                    android:id="@+id/btnCancelDialogGetAlternatives"
+                    style="@style/YesNoButton"
+                    android:text="@string/all_action_clear" />
 
-            <Button
-                android:id="@+id/btnOKDialogGetAlternatives"
-                style="@style/YesNoButton"
-                android:text="@string/all_action_ok" />
+                <Button
+                    android:id="@+id/btnOKDialogGetAlternatives"
+                    style="@style/YesNoButton"
+                    android:text="@string/all_action_ok" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
+</layout>

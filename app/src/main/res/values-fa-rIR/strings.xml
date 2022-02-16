@@ -33,4 +33,5 @@
 
     <string name="get_subject_hint_subject">موضوع تصمیم گیری</string>
     <string name="get_subject_dialog_title"><![CDATA[لطفاً مورد تصمیم گیری را وارد کنید (به عنوان مثال: انتخاب مقصد سفر، انتخاب هدیه، ....) />]]></string>
+    <string name="get_alternatives_dialog_title">لطفاً گزینه‌های موجود در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: همدان، اصفهان....)</string>
 </resources>

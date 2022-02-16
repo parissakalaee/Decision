@@ -35,4 +35,5 @@
     <string name="get_subject_hint_subject">Decision Subject</string>
     <string name="calculator_desc_dobblesteen" translatable="false">dobblesteen</string>
     <string name="get_subject_dialog_title">Please enter your decision subject, like trip, buying house, …</string>
+    <string name="get_alternatives_dialog_title">لطفاً گزینه‌های موجود در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: همدان، اصفهان....)</string>
 </resources>

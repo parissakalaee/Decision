@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.*
 import androidx.fragment.app.Fragment
+import com.parissakalaee.parkadecisionmaker.databinding.DialogGetAlternativesBinding
 import com.parissakalaee.parkadecisionmaker.databinding.DialogGetSubjectBinding
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentCalculatorBinding
 import java.util.*
+import kotlin.collections.ArrayList
 
 class FragmentCalculator() : Fragment() {
     private var _binding: FragmentCalculatorBinding? = null
@@ -43,7 +45,7 @@ class FragmentCalculator() : Fragment() {
         }
         binding.buttonQ2.setOnClickListener {
             rollDice()
-            getAlternativesDialog("لطفاً گزینه‌های موجود در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: همدان، اصفهان....)")
+            getAlternativesDialog()
         }
         binding.buttonQ3.setOnClickListener {
             rollDice()
@@ -187,8 +189,7 @@ class FragmentCalculator() : Fragment() {
     }
 
     private fun rollDice() {
-        val randomInt = Random().nextInt(6) + 1
-        val drawableResource = when (randomInt) {
+        val drawableResource = when (Random().nextInt(6) + 1) {
             1 -> R.drawable.vector_dice_1
             2 -> R.drawable.vector_dice_2
             3 -> R.drawable.vector_dice_3
@@ -205,65 +206,47 @@ class FragmentCalculator() : Fragment() {
         val binding: DialogGetSubjectBinding = DialogGetSubjectBinding.inflate(LayoutInflater.from(context))
         dialog.setContentView(binding.root)
 
-        val subject = DataModelSubject("")
+        var subject = ""
         binding.subject = subject
-
         binding.btnOkDialogGetSubject.setOnClickListener {
-            subject.name =
-                binding.edtGetSubject.text.toString().ifEmpty {
-                    ""
-                }
+            subject = binding.edtGetSubject.text?.toString() ?: ""
             dialog.dismiss()
         }
         binding.btnClearDialogGetSubject.setOnClickListener {
             binding.edtGetSubject.setText("")
-            subject.name = ""
+            subject = ""
         }
         dialog.show()
     }
 
-    private fun getAlternativesDialog(prgMessage: String) {
+    private fun getAlternativesDialog() {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_get_alternatives)
-        val textViewDialogGetAlternatives = dialog.findViewById<View>(R.id.textViewDialogGetAlternatives) as TextView
-        textViewDialogGetAlternatives.text = prgMessage
-        edtAlternatives[0] = dialog.findViewById<View>(R.id.edtAlternative1) as EditText
-        edtAlternatives[1] = dialog.findViewById<View>(R.id.edtAlternative2) as EditText
-        edtAlternatives[2] = dialog.findViewById<View>(R.id.edtAlternative3) as EditText
-        edtAlternatives[3] = dialog.findViewById<View>(R.id.edtAlternative4) as EditText
-        edtAlternatives[4] = dialog.findViewById<View>(R.id.edtAlternative5) as EditText
-        val sharedPref = PreferenceManager.getDefaultSharedPreferences(activity)
-        for (i in 0 until ARRAY_SIZE) {
-            val preferenceAlterValue = sharedPref.getString(inputAlter[i], null)
-            if (preferenceAlterValue != null) edtAlternatives[i]!!.setText(preferenceAlterValue)
+        val binding: DialogGetAlternativesBinding = DialogGetAlternativesBinding.inflate(LayoutInflater.from(context))
+        dialog.setContentView(binding.root)
+
+        val alternatives= ArrayList<String>(mutableListOf("","","","",""))
+        binding.alternatives = alternatives
+        binding.btnOKDialogGetAlternatives.setOnClickListener {
+            alternatives[0] = binding.edtAlternative1.text?.toString() ?: ""
+            alternatives[1] = binding.edtAlternative2.text?.toString() ?: ""
+            alternatives[2] = binding.edtAlternative3.text?.toString() ?: ""
+            alternatives[3] = binding.edtAlternative4.text?.toString() ?: ""
+            alternatives[4] = binding.edtAlternative5.text?.toString() ?: ""
+            dialog.dismiss()
         }
-        val btnOk = dialog.findViewById<View>(R.id.btnOKDialogGetAlternatives) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogGetAlternatives) as Button
-        btnOk.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(arg0: View) {
-                val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                for (i in 0 until ARRAY_SIZE) {
-                    if (edtAlternatives[i]!!.text.toString().length > 0) {
-                        alternativeValue[i] = edtAlternatives[i]!!.text.toString()
-                    } else {
-                        alternativeValue[i] = ""
-                    }
-                    prefsEditor.putString(inputAlter[i], alternativeValue[i]).commit()
-                }
-                dialog.dismiss()
-            }
-        })
-        btnCancel.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(arg0: View) {
-                val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                for (i in 0..4) {
-                    edtAlternatives[i]!!.setText("")
-                    prefsEditor.remove(inputAlter[i]).commit()
-                    alternativeValue[i] = ""
-                }
-            }
-        })
+        binding.btnCancelDialogGetAlternatives.setOnClickListener {
+            binding.edtAlternative1.setText("")
+            binding.edtAlternative2.setText("")
+            binding.edtAlternative3.setText("")
+            binding.edtAlternative4.setText("")
+            binding.edtAlternative5.setText("")
+            alternatives[0] = ""
+            alternatives[1] = ""
+            alternatives[2] = ""
+            alternatives[3] = ""
+            alternatives[4] = ""
+        }
         dialog.show()
     }
 
