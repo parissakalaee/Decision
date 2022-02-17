@@ -9,13 +9,12 @@ import android.view.ViewGroup
 import android.view.Window
 import android.widget.*
 import androidx.fragment.app.Fragment
-import com.parissakalaee.parkadecisionmaker.databinding.DialogGetAlternativesBinding
+import androidx.navigation.findNavController
 import com.parissakalaee.parkadecisionmaker.databinding.DialogGetSubjectBinding
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentCalculatorBinding
 import java.util.*
-import kotlin.collections.ArrayList
 
-class FragmentCalculator() : Fragment() {
+class CalculatorFragment() : Fragment() {
     private var _binding: FragmentCalculatorBinding? = null
     private val binding get() = _binding!!
 
@@ -28,10 +27,8 @@ class FragmentCalculator() : Fragment() {
     var parameterPriorityValue = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
     var myParameterPriorityValue = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
     var edtParameter = arrayOfNulls<EditText>(ARRAY_SIZE)
-    var edtAlternatives = arrayOfNulls<EditText>(ARRAY_SIZE)
 
     var inputParam = arrayOf("param0", "param1", "param2", "param3", "param4")
-    var inputAlter = arrayOf("alter0", "alter1", "alter2", "alter3", "alter4")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,153 +36,28 @@ class FragmentCalculator() : Fragment() {
     ): View {
         _binding = FragmentCalculatorBinding.inflate(inflater, container, false)
 
-        binding.buttonQ1.setOnClickListener{
-            rollDice()
-            getSubjectDialog()
-        }
-        binding.buttonQ2.setOnClickListener {
-            rollDice()
-            getAlternativesDialog()
-        }
-        binding.buttonQ3.setOnClickListener {
-            rollDice()
-            getCriteriaDialog("لطفاً پارامترهای تاثیرگذار در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: هزینه اقامت، مسیر جاده....)")
-        }
-        binding.buttonQ4.setOnClickListener {
-            rollDice()
-            prioritizeAlternativeDialog("لطفاً به هر گزینه از دیدگاه پارامترها امتیاز دهید، به عنوان مثال در خصوص مقصد سفر، از دیدگاه پارامتر مسیر جاده، گزینه همدان چه امتیازی می گیرد (عالی، خوب، ...)؟")
-        }
-        binding.buttonQ5.setOnClickListener {
-            rollDice()
-            prioritizeCriteriaDialog("لطفاً پارامترها را نسبت به هم طبقه بندی کنید(به عنوان مثال در خصوص مقصد سفر، مسیر جاده مهمتر است یا هزینه اقامت....)")
-        }
-        binding.buttonCompute.setOnClickListener {
-            rollDice()
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    myParameterPriorityValue[i][j] = 0.0
-                }
-            }
-            myParameterPriorityValue[0][0] = 1.0
-            myParameterPriorityValue[1][1] = 1.0
-            myParameterPriorityValue[2][2] = 1.0
-            myParameterPriorityValue[3][3] = 1.0
-            myParameterPriorityValue[4][4] = 1.0
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in i + 1 until ARRAY_SIZE) {
-                    if (parameterPriorityValue[i][j] != 0.0) {
-                        myParameterPriorityValue[i][j] = parameterPriorityValue[i][j]
-                        myParameterPriorityValue[j][i] =
-                            1.toDouble() / parameterPriorityValue[i][j]
-                    }
-                }
-            }
-            if ((myParameterPriorityValue[0][1] == 0.0) && (myParameterPriorityValue[0][2] == 0.0) && (myParameterPriorityValue[0][3] == 0.0) && (myParameterPriorityValue[0][4] == 0.0)) {
-                myParameterPriorityValue[0][0] = 0.0
-            }
-            if ((myParameterPriorityValue[1][0] == 0.0) && (myParameterPriorityValue[1][2] == 0.0) && (myParameterPriorityValue[1][3] == 0.0) && (myParameterPriorityValue[1][4] == 0.0)) {
-                myParameterPriorityValue[1][1] = 0.0
-            }
-            if ((myParameterPriorityValue[2][0] == 0.0) && (myParameterPriorityValue[2][1] == 0.0) && (myParameterPriorityValue[2][3] == 0.0) && (myParameterPriorityValue[2][4] == 0.0)) {
-                myParameterPriorityValue[2][2] = 0.0
-            }
-            if ((myParameterPriorityValue[3][0] == 0.0) && (myParameterPriorityValue[3][1] == 0.0) && (myParameterPriorityValue[3][2] == 0.0) && (myParameterPriorityValue[3][4] == 0.0)) {
-                myParameterPriorityValue[3][3] = 0.0
-            }
-            if ((myParameterPriorityValue[4][0] == 0.0) && (myParameterPriorityValue[4][1] == 0.0) && (myParameterPriorityValue[4][2] == 0.0) && (myParameterPriorityValue[4][3] == 0.0)) {
-                myParameterPriorityValue[4][4] = 0.0
-            }
-            val sumVerticalParam = doubleArrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    sumVerticalParam[i] += myParameterPriorityValue[j][i]
-                }
-            }
-            val tmpParam = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    if (sumVerticalParam[i] != 0.0) {
-                        tmpParam[j][i] = (myParameterPriorityValue[j][i] / sumVerticalParam[i])
-                    } else tmpParam[j][i] = 0.0
-                }
-            }
-            val sumHorizontalParam = doubleArrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    sumHorizontalParam[i] += tmpParam[i][j]
-                }
-            }
-            val tmpAlternative = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    if (sumHorizontalParam[i] != 0.0) {
-                        tmpAlternative[j][i] =
-                            (alternativePriorityValue[i][j] * sumHorizontalParam[i])
-                    } else tmpAlternative[j][i] = 0.0
-                }
-            }
-            var finalSum = 0.0
-            val sumHorizontalAlternative = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    sumHorizontalAlternative[i] += tmpAlternative[i][j]
-                }
-                finalSum += sumHorizontalAlternative[i]
-            }
-            val maxResult = doubleArrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
-            val maxIndex = intArrayOf(0, 0, 0, 0, 0)
-            for (i in 0 until ARRAY_SIZE) {
-                if (sumHorizontalAlternative[i] >= maxResult[0]) {
-                    maxResult[0] = sumHorizontalAlternative[i]
-                    maxIndex[0] = i
-                }
-            }
-            sumHorizontalAlternative[maxIndex[0]] = 0.0
-            for (i in 0 until ARRAY_SIZE) {
-                if (sumHorizontalAlternative[i] >= maxResult[1]) {
-                    maxResult[1] = sumHorizontalAlternative[i]
-                    maxIndex[1] = i
-                }
-            }
-            sumHorizontalAlternative[maxIndex[1]] = 0.0
-            for (i in 0 until ARRAY_SIZE) {
-                if (sumHorizontalAlternative[i] >= maxResult[2]) {
-                    maxResult[2] = sumHorizontalAlternative[i]
-                    maxIndex[2] = i
-                }
-            }
-            sumHorizontalAlternative[maxIndex[2]] = 0.0
-            for (i in 0 until ARRAY_SIZE) {
-                if (sumHorizontalAlternative[i] >= maxResult[3]) {
-                    maxResult[3] = sumHorizontalAlternative[i]
-                    maxIndex[3] = i
-                }
-            }
-            sumHorizontalAlternative[maxIndex[3]] = 0.0
-            for (i in 0 until ARRAY_SIZE) {
-                if (sumHorizontalAlternative[i] >= maxResult[4]) {
-                    maxResult[4] = sumHorizontalAlternative[i]
-                    maxIndex[4] = i
-                }
-            }
-            resultDialog(maxIndex, maxResult, finalSum)
-        }
-        binding.buttonReset.setOnClickListener {
-            val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-            prefsEditor.clear().commit()
-            inputDecisionValue = ""
-            for (i in 0 until ARRAY_SIZE) {
-                alternativeValue[i] = ""
-                parameterValue[i] = ""
-            }
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    parameterPriorityValue[i][j] = 0.0
-                    alternativePriorityValue[i][j] = 0.0
-                }
-            }
+        rollDice()
+        val clickableViews: List<View> =
+            listOf(binding.buttonQ1, binding.buttonQ2, binding.buttonQ3,
+                   binding.buttonQ4, binding.buttonQ5, binding.buttonCompute, binding.buttonReset)
+        for (item in clickableViews) {
+            item.setOnClickListener { checkButton(it) }
         }
         return binding.root
+    }
+
+    private fun checkButton(view: View) {
+        rollDice()
+        when (view.id) {
+            R.id.buttonQ1 -> getSubjectDialog()
+            R.id.buttonQ2 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_getAlternativesFragment)
+            R.id.buttonQ3 -> getCriteriaDialog("لطفاً پارامترهای تاثیرگذار در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: هزینه اقامت، مسیر جاده....)")
+            R.id.buttonQ4 -> prioritizeAlternativeDialog("لطفاً به هر گزینه از دیدگاه پارامترها امتیاز دهید، به عنوان مثال در خصوص مقصد سفر، از دیدگاه پارامتر مسیر جاده، گزینه همدان چه امتیازی می گیرد (عالی، خوب، ...)؟")
+            R.id.buttonQ5 -> prioritizeCriteriaDialog("لطفاً پارامترها را نسبت به هم طبقه بندی کنید(به عنوان مثال در خصوص مقصد سفر، مسیر جاده مهمتر است یا هزینه اقامت....)")
+            R.id.buttonCompute -> computeResult()
+            R.id.buttonReset -> resetResult()
+            else -> rollDice()
+        }
     }
 
     private fun rollDice() {
@@ -219,37 +91,132 @@ class FragmentCalculator() : Fragment() {
         dialog.show()
     }
 
-    private fun getAlternativesDialog() {
-        val dialog = Dialog(requireContext())
-        dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        val binding: DialogGetAlternativesBinding = DialogGetAlternativesBinding.inflate(LayoutInflater.from(context))
-        dialog.setContentView(binding.root)
-
-        val alternatives= ArrayList<String>(mutableListOf("","","","",""))
-        binding.alternatives = alternatives
-        binding.btnOKDialogGetAlternatives.setOnClickListener {
-            alternatives[0] = binding.edtAlternative1.text?.toString() ?: ""
-            alternatives[1] = binding.edtAlternative2.text?.toString() ?: ""
-            alternatives[2] = binding.edtAlternative3.text?.toString() ?: ""
-            alternatives[3] = binding.edtAlternative4.text?.toString() ?: ""
-            alternatives[4] = binding.edtAlternative5.text?.toString() ?: ""
-            dialog.dismiss()
+    private fun resetResult(){
+        val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
+        prefsEditor.clear().commit()
+        inputDecisionValue = ""
+        for (i in 0 until ARRAY_SIZE) {
+            alternativeValue[i] = ""
+            parameterValue[i] = ""
         }
-        binding.btnCancelDialogGetAlternatives.setOnClickListener {
-            binding.edtAlternative1.setText("")
-            binding.edtAlternative2.setText("")
-            binding.edtAlternative3.setText("")
-            binding.edtAlternative4.setText("")
-            binding.edtAlternative5.setText("")
-            alternatives[0] = ""
-            alternatives[1] = ""
-            alternatives[2] = ""
-            alternatives[3] = ""
-            alternatives[4] = ""
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in 0 until ARRAY_SIZE) {
+                parameterPriorityValue[i][j] = 0.0
+                alternativePriorityValue[i][j] = 0.0
+            }
         }
-        dialog.show()
     }
 
+    private fun computeResult(){
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in 0 until ARRAY_SIZE) {
+                myParameterPriorityValue[i][j] = 0.0
+            }
+        }
+        myParameterPriorityValue[0][0] = 1.0
+        myParameterPriorityValue[1][1] = 1.0
+        myParameterPriorityValue[2][2] = 1.0
+        myParameterPriorityValue[3][3] = 1.0
+        myParameterPriorityValue[4][4] = 1.0
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in i + 1 until ARRAY_SIZE) {
+                if (parameterPriorityValue[i][j] != 0.0) {
+                    myParameterPriorityValue[i][j] = parameterPriorityValue[i][j]
+                    myParameterPriorityValue[j][i] =
+                        1.toDouble() / parameterPriorityValue[i][j]
+                }
+            }
+        }
+        if ((myParameterPriorityValue[0][1] == 0.0) && (myParameterPriorityValue[0][2] == 0.0) && (myParameterPriorityValue[0][3] == 0.0) && (myParameterPriorityValue[0][4] == 0.0)) {
+            myParameterPriorityValue[0][0] = 0.0
+        }
+        if ((myParameterPriorityValue[1][0] == 0.0) && (myParameterPriorityValue[1][2] == 0.0) && (myParameterPriorityValue[1][3] == 0.0) && (myParameterPriorityValue[1][4] == 0.0)) {
+            myParameterPriorityValue[1][1] = 0.0
+        }
+        if ((myParameterPriorityValue[2][0] == 0.0) && (myParameterPriorityValue[2][1] == 0.0) && (myParameterPriorityValue[2][3] == 0.0) && (myParameterPriorityValue[2][4] == 0.0)) {
+            myParameterPriorityValue[2][2] = 0.0
+        }
+        if ((myParameterPriorityValue[3][0] == 0.0) && (myParameterPriorityValue[3][1] == 0.0) && (myParameterPriorityValue[3][2] == 0.0) && (myParameterPriorityValue[3][4] == 0.0)) {
+            myParameterPriorityValue[3][3] = 0.0
+        }
+        if ((myParameterPriorityValue[4][0] == 0.0) && (myParameterPriorityValue[4][1] == 0.0) && (myParameterPriorityValue[4][2] == 0.0) && (myParameterPriorityValue[4][3] == 0.0)) {
+            myParameterPriorityValue[4][4] = 0.0
+        }
+        val sumVerticalParam = doubleArrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in 0 until ARRAY_SIZE) {
+                sumVerticalParam[i] += myParameterPriorityValue[j][i]
+            }
+        }
+        val tmpParam = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in 0 until ARRAY_SIZE) {
+                if (sumVerticalParam[i] != 0.0) {
+                    tmpParam[j][i] = (myParameterPriorityValue[j][i] / sumVerticalParam[i])
+                } else tmpParam[j][i] = 0.0
+            }
+        }
+        val sumHorizontalParam = doubleArrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in 0 until ARRAY_SIZE) {
+                sumHorizontalParam[i] += tmpParam[i][j]
+            }
+        }
+        val tmpAlternative = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in 0 until ARRAY_SIZE) {
+                if (sumHorizontalParam[i] != 0.0) {
+                    tmpAlternative[j][i] =
+                        (alternativePriorityValue[i][j] * sumHorizontalParam[i])
+                } else tmpAlternative[j][i] = 0.0
+            }
+        }
+        var finalSum = 0.0
+        val sumHorizontalAlternative = arrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
+        for (i in 0 until ARRAY_SIZE) {
+            for (j in 0 until ARRAY_SIZE) {
+                sumHorizontalAlternative[i] += tmpAlternative[i][j]
+            }
+            finalSum += sumHorizontalAlternative[i]
+        }
+        val maxResult = doubleArrayOf(0.0, 0.0, 0.0, 0.0, 0.0)
+        val maxIndex = intArrayOf(0, 0, 0, 0, 0)
+        for (i in 0 until ARRAY_SIZE) {
+            if (sumHorizontalAlternative[i] >= maxResult[0]) {
+                maxResult[0] = sumHorizontalAlternative[i]
+                maxIndex[0] = i
+            }
+        }
+        sumHorizontalAlternative[maxIndex[0]] = 0.0
+        for (i in 0 until ARRAY_SIZE) {
+            if (sumHorizontalAlternative[i] >= maxResult[1]) {
+                maxResult[1] = sumHorizontalAlternative[i]
+                maxIndex[1] = i
+            }
+        }
+        sumHorizontalAlternative[maxIndex[1]] = 0.0
+        for (i in 0 until ARRAY_SIZE) {
+            if (sumHorizontalAlternative[i] >= maxResult[2]) {
+                maxResult[2] = sumHorizontalAlternative[i]
+                maxIndex[2] = i
+            }
+        }
+        sumHorizontalAlternative[maxIndex[2]] = 0.0
+        for (i in 0 until ARRAY_SIZE) {
+            if (sumHorizontalAlternative[i] >= maxResult[3]) {
+                maxResult[3] = sumHorizontalAlternative[i]
+                maxIndex[3] = i
+            }
+        }
+        sumHorizontalAlternative[maxIndex[3]] = 0.0
+        for (i in 0 until ARRAY_SIZE) {
+            if (sumHorizontalAlternative[i] >= maxResult[4]) {
+                maxResult[4] = sumHorizontalAlternative[i]
+                maxIndex[4] = i
+            }
+        }
+        resultDialog(maxIndex, maxResult, finalSum)
+    }
     private fun getCriteriaDialog(prgMessage: String) {
         val dialog = Dialog(requireContext())
         dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)

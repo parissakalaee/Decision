@@ -36,6 +36,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation files('libs/justify.jar')
     implementation "androidx.core:core-ktx:1.7.0"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
     kapt "com.android.databinding:compiler:3.1.4"
 }

@@ -5,7 +5,7 @@
     <string name="all_holder_lorem_ipsum">Lorem Ipsum Holder</string>
     <string name="all_msg_email_address" translatable="false">parissa.kalaee@gmail.com</string>
 
-    <string name="app_name">ParkaDecisionMaker</string>
+    <string name="app_name">Parka Decision Maker</string>
 
     <string name="calculator_action_alternatives">Alternatives</string>
     <string name="calculator_action_calculate">Calculate</string>

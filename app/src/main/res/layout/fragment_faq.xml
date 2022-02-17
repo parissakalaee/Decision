@@ -29,7 +29,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ00"
             style="@style/HelpTextBlack" />
 
@@ -42,7 +41,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ01"
             style="@style/HelpTextBlack" />
 
@@ -55,7 +53,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ02"
             style="@style/HelpTextBlack" />
 
@@ -68,7 +65,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ03"
             style="@style/HelpTextBlack" />
 
@@ -81,7 +77,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ04"
             style="@style/HelpTextBlack" />
 
@@ -94,7 +89,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ05"
             style="@style/HelpTextBlack" />
 
@@ -107,7 +101,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ06"
             style="@style/HelpTextBlack" />
 
@@ -129,7 +122,6 @@
             android:textSize="16sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ07"
             style="@style/HelpTextBlack" />
 
@@ -143,102 +135,82 @@
             android:textSize="18sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ08"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ09"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ10"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ11"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ12"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ13"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ14"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ15"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ16"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ17"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ18"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ19"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ20"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ21"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ22"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ23"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ24"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ25"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ26"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_FAQ27"
             style="@style/HelpTextBlack" />
     </LinearLayout>

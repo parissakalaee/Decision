@@ -12,8 +12,8 @@ import java.util.*
 
 class ViewAlternativeComp : LinearLayout {
     var txtParameter: TextView? = null
-    var txtAlt: Array<TextView?> = arrayOfNulls(FragmentCalculator.ARRAY_SIZE)
-    var spinner: Array<Spinner?> = arrayOfNulls(FragmentCalculator.ARRAY_SIZE)
+    var txtAlt: Array<TextView?> = arrayOfNulls(CalculatorFragment.ARRAY_SIZE)
+    var spinner: Array<Spinner?> = arrayOfNulls(CalculatorFragment.ARRAY_SIZE)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         initializer(context)
@@ -23,7 +23,7 @@ class ViewAlternativeComp : LinearLayout {
         initializer(context)
     }
 
-    var alternativeItem: DoubleArray = DoubleArray(FragmentCalculator.ARRAY_SIZE)
+    var alternativeItem: DoubleArray = DoubleArray(CalculatorFragment.ARRAY_SIZE)
     var indexSpinner: Int = 0
     private fun initializer(context: Context) {
         if (isInEditMode()) {
@@ -48,7 +48,7 @@ class ViewAlternativeComp : LinearLayout {
         spinner[2] = layout.findViewById<View>(R.id.spinner4) as Spinner?
         spinner[3] = layout.findViewById<View>(R.id.spinner5) as Spinner?
         spinner[4] = layout.findViewById<View>(R.id.spinner6) as Spinner?
-        for (i in 0 until FragmentCalculator.ARRAY_SIZE) spinner.get(i)!!
+        for (i in 0 until CalculatorFragment.ARRAY_SIZE) spinner.get(i)!!
             .setAdapter(dataAdapter)
         spinner.get(0)!!.setOnItemSelectedListener(object : OnItemSelectedListener {
             public override fun onItemSelected(
@@ -160,7 +160,7 @@ class ViewAlternativeComp : LinearLayout {
 
     fun setAltText(param: String?, input: Array<String>) {
         txtParameter!!.setText(param)
-        for (i in 0 until FragmentCalculator.ARRAY_SIZE) txtAlt.get(i)!!
+        for (i in 0 until CalculatorFragment.ARRAY_SIZE) txtAlt.get(i)!!
             .setText(input.get(i))
     }
 

@@ -21,52 +21,42 @@
             android:textSize="18sp" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help00"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help01"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help02"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help03"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help04"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help05"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help06"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help07"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help08"
             style="@style/HelpTextBlack" />
 
         <ir.noghteh.JustifiedTextView
-            xmlns:noghteh="http://noghteh.ir"
             android:id="@+id/txt_help09"
             style="@style/HelpTextBlack" />
     </LinearLayout>
