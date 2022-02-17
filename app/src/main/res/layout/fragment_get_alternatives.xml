@@ -12,7 +12,7 @@
         <LinearLayout style="@style/MessageLayout" >
             <TextView
                 style="@style/MessageTextView"
-                android:text="@string/get_alternatives_dialog_title"/>
+                android:text="@string/get_alternatives_fragment_title"/>
 
             <EditText
                 android:id="@+id/edtAlternative1"

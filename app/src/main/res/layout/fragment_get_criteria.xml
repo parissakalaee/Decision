@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="java.util.ArrayList"/>
+        <variable
+            name="criteria"
+            type="ArrayList&lt;String&gt;" />
+    </data>
+<ScrollView
     style="@style/MessageScrollBar">
 
     <LinearLayout style="@style/MessageLayout" >
 
         <TextView
-            android:id="@+id/textViewDialogGetCriteria"
             style="@style/MessageTextView"
-            android:text="@string/all_holder_lorem_ipsum" />
-
+            android:text="@string/get_criteria_fragment_title"/>
         <EditText
             android:id="@+id/edtParameter1"
             style="@style/EditTextCustomized"
-            android:hint="@string/get_criteria_hint_criterion1" />
+            android:hint="@string/get_criteria_hint_criterion1"
+            android:text="@={criteria[0]}"/>
 
         <EditText
             android:id="@+id/edtParameter2"
             style="@style/EditTextCustomized"
-            android:hint="@string/get_criteria_hint_criterion2" />
+            android:hint="@string/get_criteria_hint_criterion2"
+            android:text="@={criteria[1]}"/>
 
         <EditText
             android:id="@+id/edtParameter3"
             style="@style/EditTextCustomized"
-            android:hint="@string/get_criteria_hint_criterion3" />
+            android:hint="@string/get_criteria_hint_criterion3"
+            android:text="@={criteria[2]}"/>
 
         <EditText
             android:id="@+id/edtParameter4"
             style="@style/EditTextCustomized"
-            android:hint="@string/get_criteria_hint_criterion4" />
+            android:hint="@string/get_criteria_hint_criterion4"
+            android:text="@={criteria[3]}"/>
 
         <EditText
             android:id="@+id/edtParameter5"
             style="@style/EditTextCustomized"
-            android:hint="@string/get_criteria_hint_criterion5" />
+            android:hint="@string/get_criteria_hint_criterion5"
+            android:text="@={criteria[4]}"/>
 
         <LinearLayout style="@style/ButtonLayout" >
 
@@ -49,3 +59,4 @@
     </LinearLayout>
 
 </ScrollView>
+</layout>

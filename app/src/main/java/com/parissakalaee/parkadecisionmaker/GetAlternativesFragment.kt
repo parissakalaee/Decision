@@ -27,7 +27,7 @@ class GetAlternativesFragment : Fragment() {
             alternatives[2] = binding.edtAlternative3.text?.toString() ?: ""
             alternatives[3] = binding.edtAlternative4.text?.toString() ?: ""
             alternatives[4] = binding.edtAlternative5.text?.toString() ?: ""
-            view.findNavController().navigate(R.id.action_getAlternativesFragment_to_calculatorFragment)
+            view.findNavController().navigate(R.id.action_getAlternativesFragment_to_getCriteriaFragment)
         }
         binding.btnCancelDialogGetAlternatives.setOnClickListener {
             binding.edtAlternative1.setText("")

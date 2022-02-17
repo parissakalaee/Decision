@@ -51,7 +51,7 @@ class CalculatorFragment() : Fragment() {
         when (view.id) {
             R.id.buttonQ1 -> getSubjectDialog()
             R.id.buttonQ2 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_getAlternativesFragment)
-            R.id.buttonQ3 -> getCriteriaDialog("لطفاً پارامترهای تاثیرگذار در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: هزینه اقامت، مسیر جاده....)")
+            R.id.buttonQ3 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_getCriteriaFragment)
             R.id.buttonQ4 -> prioritizeAlternativeDialog("لطفاً به هر گزینه از دیدگاه پارامترها امتیاز دهید، به عنوان مثال در خصوص مقصد سفر، از دیدگاه پارامتر مسیر جاده، گزینه همدان چه امتیازی می گیرد (عالی، خوب، ...)؟")
             R.id.buttonQ5 -> prioritizeCriteriaDialog("لطفاً پارامترها را نسبت به هم طبقه بندی کنید(به عنوان مثال در خصوص مقصد سفر، مسیر جاده مهمتر است یا هزینه اقامت....)")
             R.id.buttonCompute -> computeResult()
@@ -216,53 +216,6 @@ class CalculatorFragment() : Fragment() {
             }
         }
         resultDialog(maxIndex, maxResult, finalSum)
-    }
-    private fun getCriteriaDialog(prgMessage: String) {
-        val dialog = Dialog(requireContext())
-        dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_get_criteria)
-        val textViewDialogGetCriteria = dialog.findViewById<View>(R.id.textViewDialogGetCriteria) as TextView
-        textViewDialogGetCriteria.text = prgMessage
-        edtParameter[0] = dialog.findViewById<View>(R.id.edtParameter1) as EditText
-        edtParameter[1] = dialog.findViewById<View>(R.id.edtParameter2) as EditText
-        edtParameter[2] = dialog.findViewById<View>(R.id.edtParameter3) as EditText
-        edtParameter[3] = dialog.findViewById<View>(R.id.edtParameter4) as EditText
-        edtParameter[4] = dialog.findViewById<View>(R.id.edtParameter5) as EditText
-        val sharedPref = PreferenceManager.getDefaultSharedPreferences(activity)
-        for (i in 0 until ARRAY_SIZE) {
-            val preferenceParamValue = sharedPref.getString(inputParam[i], null)
-            if (preferenceParamValue != null) edtParameter[i]!!.setText(preferenceParamValue)
-        }
-        val btnOk = dialog.findViewById<View>(R.id.btnOKDialogGetCriteria) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogGetCriteria) as Button
-        btnOk.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(arg0: View) {
-                val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                for (i in 0 until ARRAY_SIZE) {
-                    if (edtParameter[i]!!.text.toString().length > 0) {
-                        parameterValue[i] = edtParameter[i]!!.text.toString()
-                    } else {
-                        parameterValue[i] = ""
-                    }
-                    prefsEditor.putString(inputParam[i], parameterValue[i]).commit()
-                }
-
-                //				btnQ[3].setEnabled(true);
-                //				btnQ[4].setEnabled(true);
-                dialog.dismiss()
-            }
-        })
-        btnCancel.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(arg0: View) {
-                val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                for (i in 0..4) {
-                    edtParameter[i]!!.setText("")
-                    prefsEditor.remove(inputParam[i]).commit()
-                    parameterValue[i] = ""
-                }
-            }
-        })
-        dialog.show()
     }
 
     private fun prioritizeAlternativeDialog(prgMessage: String) {
