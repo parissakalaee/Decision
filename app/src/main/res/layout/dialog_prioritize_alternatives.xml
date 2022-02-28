@@ -10,7 +10,7 @@
         <TextView
             android:id="@+id/textViewDialogPrioritizeAlternatives"
             style="@style/MessageTextView"
-            android:text="@string/all_holder_lorem_ipsum" />
+            android:text="@string/prioritize_alternatives_dialog_title" />
 
         <LinearLayout
             android:layout_width="match_parent"

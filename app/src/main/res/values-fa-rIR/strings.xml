@@ -37,5 +37,6 @@
     <string name="get_criteria_fragment_title">لطفاً پارامترهای تاثیرگذار در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: هزینه اقامت، مسیر جاده....)</string>
     <string name="prioritize_alternatives_dialog_title">لطفاً به هر گزینه از دیدگاه پارامترها امتیاز دهید، به عنوان مثال در خصوص مقصد سفر، از دیدگاه پارامتر مسیر جاده، گزینه همدان چه امتیازی می گیرد (عالی، خوب، …)؟</string>
     <string name="prioritize_criteria_dialog_title">لطفاً پارامترها را نسبت به هم طبقه بندی کنید(به عنوان مثال در خصوص مقصد سفر، مسیر جاده مهمتر است یا هزینه اقامت....)</string>
+    <string name="all_msg_complete_entries">لطفاً ورودی‌های برنامه را کامل کنید</string>
 
 </resources>
