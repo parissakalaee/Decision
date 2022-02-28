@@ -14,11 +14,11 @@
     <string name="calculator_action_prioritize_criteria">Prioritize Criteria</string>
     <string name="calculator_action_subject">Decision Subject</string>
 
-    <string name="compare_alternatives_holder_middle">پول</string>
-    <string name="compare_alternatives_msg_beginning">از دیدگاه</string>
-    <string name="compare_alternatives_msg_rest">به گزینه ها امتیاز دهید:</string>
-    <string name="compare_criteria_holder_item1">مورد اول</string>
-    <string name="compare_criteria_holder_item2">مورد دوم</string>
+    <string name="compare_alternatives_holder_middle">money</string>
+    <string name="compare_alternatives_msg_beginning">based on criteria</string>
+    <string name="compare_alternatives_msg_rest">rate the alternatives</string>
+    <string name="compare_criteria_holder_item1">first case</string>
+    <string name="compare_criteria_holder_item2">second case</string>
 
     <string name="get_alternatives_hint_alternatives1">1st Alternative</string>
     <string name="get_alternatives_hint_alternatives2">2nd Alternative</string>
@@ -33,8 +33,10 @@
     <string name="get_criteria_hint_criterion5">5th Criterion</string>
 
     <string name="get_subject_hint_subject">Decision Subject</string>
-    <string name="calculator_desc_dobblesteen" translatable="false">dobblesteen</string>
+    <string name="calculator_desc_dice" translatable="false">dice</string>
     <string name="get_subject_dialog_title">Please enter your decision subject, like trip, buying house, …</string>
-    <string name="get_alternatives_fragment_title">لطفاً گزینه‌های موجود در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: همدان، اصفهان....)</string>
-    <string name="get_criteria_fragment_title">لطفاً پارامترهای تاثیرگذار در تصمیم گیری را وارد کنید (به عنوان مثال در خصوص مقصد سفر: هزینه اقامت، مسیر جاده....)</string>
+    <string name="get_alternatives_fragment_title">Please enter alternatives, in trip case, e.g. France, Italy, …</string>
+    <string name="get_criteria_fragment_title">Please enter criteria, in trip case, e.g. cost, distance, … </string>
+    <string name="prioritize_alternatives_dialog_title">Please rate each alternative based on criteria.</string>
+    <string name="prioritize_criteria_dialog_title">Please rate criteria to each other.</string>
 </resources>
