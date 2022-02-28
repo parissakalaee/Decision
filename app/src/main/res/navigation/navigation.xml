@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_calculatorFragment_to_getCriteriaFragment"
             app:destination="@id/getCriteriaFragment" />
+        <action
+            android:id="@+id/action_calculatorFragment_to_prioritizeAlternativesFragment"
+            app:destination="@id/prioritizeAlternativesFragment" />
     </fragment>
     <fragment
         android:id="@+id/getAlternativesFragment"
@@ -36,6 +39,18 @@
         tools:layout="@layout/fragment_get_criteria">
         <action
             android:id="@+id/action_getCriteriaFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
+        <action
+            android:id="@+id/action_getCriteriaFragment_to_prioritizeAlternativesFragment"
+            app:destination="@id/prioritizeAlternativesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prioritizeAlternativesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.fragment.PrioritizeAlternativesFragment"
+        android:label="PrioritizeAlternativesFragment"
+        tools:layout="@layout/fragment_prioritize_alternatives">
+        <action
+            android:id="@+id/action_prioritizeAlternativesFragment_to_calculatorFragment"
             app:destination="@id/calculatorFragment" />
     </fragment>
 </navigation>

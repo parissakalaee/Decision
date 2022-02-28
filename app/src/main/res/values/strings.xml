@@ -39,5 +39,5 @@
     <string name="get_criteria_fragment_title">Please enter criteria, in trip case, e.g. cost, distance, … </string>
     <string name="prioritize_alternatives_dialog_title">Please rate each alternative based on criteria.</string>
     <string name="prioritize_criteria_dialog_title">Please rate criteria to each other.</string>
-    <string name="all_msg_complete_entries">لطفاً ورودی‌های برنامه را کامل کنید</string>
+    <string name="all_msg_complete_entries">Please complete the entries!</string>
 </resources>

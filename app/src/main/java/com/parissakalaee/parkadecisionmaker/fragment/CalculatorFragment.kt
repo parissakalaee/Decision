@@ -24,14 +24,11 @@ class CalculatorFragment() : Fragment() {
     var inputDecisionValue = ""
     var parameterValue = arrayOf("", "", "", "", "")
     var alternativeValue = arrayOf("", "", "", "", "")
-    var viewAlternativeComp = arrayListOf<ViewAlternativeComp>()
     var viewParameterComp = arrayListOf<ViewParameterComp>()
     var alternativePriorityValue = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
     var parameterPriorityValue = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
     var myParameterPriorityValue = Array(ARRAY_SIZE) { DoubleArray(ARRAY_SIZE) }
-    var edtParameter = arrayOfNulls<EditText>(ARRAY_SIZE)
 
-    var inputParam = arrayOf("param0", "param1", "param2", "param3", "param4")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -55,7 +52,7 @@ class CalculatorFragment() : Fragment() {
             R.id.buttonQ1 -> getSubjectDialog()
             R.id.buttonQ2 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_getAlternativesFragment)
             R.id.buttonQ3 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_getCriteriaFragment)
-            R.id.buttonQ4 -> prioritizeAlternativeDialog()
+            R.id.buttonQ4 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_prioritizeAlternativesFragment)
             R.id.buttonQ5 -> prioritizeCriteriaDialog()
             R.id.buttonCompute -> computeResult()
             R.id.buttonReset -> resetResult()
@@ -219,83 +216,6 @@ class CalculatorFragment() : Fragment() {
             }
         }
         resultDialog(maxIndex, maxResult, finalSum)
-    }
-
-    private fun prioritizeAlternativeDialog() {
-        val dialog = Dialog(requireContext())
-        dialog.window!!.requestFeature(Window.FEATURE_NO_TITLE)
-        dialog.setContentView(R.layout.dialog_prioritize_alternatives)
-        val textViewDialogPrioritizeAlternatives = dialog.findViewById<View>(R.id.textViewDialogPrioritizeAlternatives) as TextView
-        viewAlternativeComp[0] =
-            dialog.findViewById<View>(R.id.viewAlternativeComp1) as ViewAlternativeComp
-        viewAlternativeComp[1] =
-            dialog.findViewById<View>(R.id.viewAlternativeComp2) as ViewAlternativeComp
-        viewAlternativeComp[2] =
-            dialog.findViewById<View>(R.id.viewAlternativeComp3) as ViewAlternativeComp
-        viewAlternativeComp[3] =
-            dialog.findViewById<View>(R.id.viewAlternativeComp4) as ViewAlternativeComp
-        viewAlternativeComp[4] =
-            dialog.findViewById<View>(R.id.viewAlternativeComp5) as ViewAlternativeComp
-        val btnOk = dialog.findViewById<View>(R.id.btnOkDialogPrioritizeAlternatives) as Button
-        val btnCancel = dialog.findViewById<View>(R.id.btnCancelDialogPrioritizeAlternatives) as Button
-        for (i in 0 until ARRAY_SIZE) viewAlternativeComp[i].getID(i)
-        for (i in 0 until ARRAY_SIZE) viewAlternativeComp[i].setAltText(parameterValue[i], alternativeValue)
-        var iCnt = 0
-        for (i in 0 until ARRAY_SIZE) {
-            if (parameterValue[i].isEmpty()) {
-                iCnt++
-                viewAlternativeComp[i].visibility = View.GONE
-            }
-            if (iCnt == 5) {
-                textViewDialogPrioritizeAlternatives.text = getString(R.string.all_msg_complete_entries)
-                btnCancel.visibility = View.GONE
-                btnOk.text = getString(R.string.all_action_ok)
-            }
-            var jCnt = 0
-            for (j in 0 until ARRAY_SIZE) {
-                if (alternativeValue[j].isEmpty()) jCnt++
-                if (jCnt == 5) {
-                    textViewDialogPrioritizeAlternatives.text = getString(R.string.all_msg_complete_entries)
-                    viewAlternativeComp[i].visibility = View.GONE
-                    btnCancel.visibility = View.GONE
-                    btnOk.text = getString(R.string.all_action_ok)
-                }
-            }
-        }
-        for (i in 0 until ARRAY_SIZE) {
-            for (j in 0 until ARRAY_SIZE) {
-                if (alternativeValue[j].isEmpty()) {
-                    viewAlternativeComp[i].setVisibilityText(j)
-                }
-            }
-        }
-        btnOk.setOnClickListener {
-            for (i in 0 until ARRAY_SIZE) for (j in 0 until ARRAY_SIZE) {
-                alternativePriorityValue[i][j] = viewAlternativeComp[i].getMyAlternativeItem()[j]
-                val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-                prefsEditor.putInt(
-                    ViewAlternativeComp.spinnerAlterSelection.get(i).get(j),
-                    (5 - alternativePriorityValue[i][j]).toInt()
-                ).commit()
-            }
-            dialog.dismiss()
-        }
-        btnCancel.setOnClickListener {
-            val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
-            for (i in 0..4) for (j in 0..4) prefsEditor.remove(
-                ViewAlternativeComp.spinnerAlterSelection.get(
-                    i
-                ).get(j)
-            ).commit()
-            for (i in 0 until ARRAY_SIZE) viewAlternativeComp[i]
-                .clearID(i)
-            for (i in 0 until ARRAY_SIZE) {
-                for (j in 0 until ARRAY_SIZE) {
-                    alternativePriorityValue[i][j] = 0.0
-                }
-            }
-        }
-        dialog.show()
     }
 
     private fun prioritizeCriteriaDialog() {
