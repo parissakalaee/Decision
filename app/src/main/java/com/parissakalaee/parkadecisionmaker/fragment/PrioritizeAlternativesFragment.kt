@@ -27,11 +27,12 @@ class PrioritizeAlternativesFragment : Fragment() {
     ): View {
         _binding = FragmentPrioritizeAlternativesBinding.inflate(inflater, container, false)
 
-        viewAlternativeComp[0] = binding.viewAlternativeComp1
-        viewAlternativeComp[1] = binding.viewAlternativeComp2
-        viewAlternativeComp[2] = binding.viewAlternativeComp3
-        viewAlternativeComp[3] = binding.viewAlternativeComp4
-        viewAlternativeComp[4] = binding.viewAlternativeComp5
+        viewAlternativeComp.clear()
+        viewAlternativeComp.add(binding.viewAlternativeComp1)
+        viewAlternativeComp.add(binding.viewAlternativeComp2)
+        viewAlternativeComp.add(binding.viewAlternativeComp3)
+        viewAlternativeComp.add(binding.viewAlternativeComp4)
+        viewAlternativeComp.add(binding.viewAlternativeComp5)
 
         for (i in 0 until CalculatorFragment.ARRAY_SIZE) viewAlternativeComp[i].getID(i)
         for (i in 0 until CalculatorFragment.ARRAY_SIZE) viewAlternativeComp[i].setAltText(parameterValue[i], alternativeValue)
@@ -73,7 +74,7 @@ class PrioritizeAlternativesFragment : Fragment() {
                     (5 - alternativePriorityValue[i][j]).toInt()
                 )
             }
-            view.findNavController().navigate(R.id.action_getCriteriaFragment_to_prioritizeAlternativesFragment)
+            view.findNavController().navigate(R.id.action_prioritizeAlternativesFragment_to_calculatorFragment)
         }
         binding.btnCancelDialogPrioritizeAlternatives.setOnClickListener {
             val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
@@ -81,7 +82,7 @@ class PrioritizeAlternativesFragment : Fragment() {
                 ViewAlternativeComp.spinnerAlterSelection[i][j]
             )
             for (i in 0 until CalculatorFragment.ARRAY_SIZE) viewAlternativeComp[i]
-                .clearID(i)
+                .clearID()
             for (i in 0 until CalculatorFragment.ARRAY_SIZE) {
                 for (j in 0 until CalculatorFragment.ARRAY_SIZE) {
                     alternativePriorityValue[i][j] = 0.0

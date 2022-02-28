@@ -11,7 +11,6 @@ import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.parissakalaee.parkadecisionmaker.R
-import com.parissakalaee.parkadecisionmaker.ViewAlternativeComp
 import com.parissakalaee.parkadecisionmaker.ViewParameterComp
 import com.parissakalaee.parkadecisionmaker.databinding.DialogGetSubjectBinding
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentCalculatorBinding
