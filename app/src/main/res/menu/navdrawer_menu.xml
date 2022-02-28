@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/rulesFragment"
+        android:icon="@drawable/rules"
+        android:title="@string/all_menu_rules" />
+    <item
+        android:id="@+id/aboutFragment"
+        android:icon="@drawable/vector_dice_6"
+        android:title="@string/all_menu_about" />
+</menu>

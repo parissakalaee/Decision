@@ -43,5 +43,8 @@
     <string name="all_msg_good">خوب</string>
     <string name="all_msg_so_so">متوسط</string>
     <string name="all_msg_bad">بد</string>
+    <string name="all_menu_about">درباره ما</string>
+    <string name="all_menu_rules">قوانین</string>
+    <string name="all_menu_share">اشتراک گذاری</string>
 
 </resources>

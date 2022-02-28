@@ -45,4 +45,7 @@
     <string name="all_msg_good">good</string>
     <string name="all_msg_so_so">so-so</string>
     <string name="all_msg_bad">bad</string>
+    <string name="all_menu_about">about us</string>
+    <string name="all_menu_rules">rules</string>
+    <string name="all_menu_share">share</string>
 </resources>
