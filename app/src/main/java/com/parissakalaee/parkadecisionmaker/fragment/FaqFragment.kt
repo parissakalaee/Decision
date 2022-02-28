@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.fragment
 
 import android.os.Bundle
 import android.util.TypedValue
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.parissakalaee.parkadecisionmaker.R
 import ir.noghteh.JustifiedTextView
 
 class FaqFragment : Fragment() {

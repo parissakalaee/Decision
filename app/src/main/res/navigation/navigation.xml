@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/calculatorFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.CalculatorFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.fragment.CalculatorFragment"
         android:label="CalculatorFragment"
         tools:layout="@layout/fragment_calculator">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/getAlternativesFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.GetAlternativesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.fragment.GetAlternativesFragment"
         android:label="GetAlternativesFragment"
         tools:layout="@layout/fragment_get_alternatives">
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/getCriteriaFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.GetCriteriaFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.fragment.GetCriteriaFragment"
         android:label="GetCriteriaFragment"
         tools:layout="@layout/fragment_get_criteria">
         <action

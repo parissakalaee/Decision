@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
+import com.parissakalaee.parkadecisionmaker.fragment.CalculatorFragment
 import java.util.*
 
 class ViewAlternativeComp : LinearLayout {

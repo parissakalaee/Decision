@@ -1,18 +1,12 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.fragment
 
-import android.app.Dialog
 import android.os.Bundle
-import android.preference.PreferenceManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.navigation.findNavController
-import com.parissakalaee.parkadecisionmaker.databinding.FragmentGetAlternativesBinding
+import com.parissakalaee.parkadecisionmaker.R
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentGetCriteriaBinding
 
 class GetCriteriaFragment : Fragment() {

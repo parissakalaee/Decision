@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.fragment
 
 import android.app.Dialog
 import android.os.Bundle
@@ -10,6 +10,9 @@ import android.view.Window
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.parissakalaee.parkadecisionmaker.R
+import com.parissakalaee.parkadecisionmaker.ViewAlternativeComp
+import com.parissakalaee.parkadecisionmaker.ViewParameterComp
 import com.parissakalaee.parkadecisionmaker.databinding.DialogGetSubjectBinding
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentCalculatorBinding
 import java.util.*
