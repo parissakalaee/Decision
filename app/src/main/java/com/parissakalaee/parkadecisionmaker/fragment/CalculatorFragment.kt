@@ -49,9 +49,9 @@ class CalculatorFragment() : Fragment() {
         rollDice()
         when (view.id) {
             R.id.buttonQ1 -> getSubjectDialog()
-            R.id.buttonQ2 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_getAlternativesFragment)
-            R.id.buttonQ3 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_getCriteriaFragment)
-            R.id.buttonQ4 -> view.findNavController().navigate(R.id.action_calculatorFragment_to_prioritizeAlternativesFragment)
+            R.id.buttonQ2 -> view.findNavController().navigate(CalculatorFragmentDirections.actionCalculatorFragmentToGetAlternativesFragment())
+            R.id.buttonQ3 -> view.findNavController().navigate(CalculatorFragmentDirections.actionCalculatorFragmentToGetCriteriaFragment())
+            R.id.buttonQ4 -> view.findNavController().navigate(CalculatorFragmentDirections.actionCalculatorFragmentToPrioritizeAlternativesFragment())
             R.id.buttonQ5 -> prioritizeCriteriaDialog()
             R.id.buttonCompute -> computeResult()
             R.id.buttonReset -> resetResult()

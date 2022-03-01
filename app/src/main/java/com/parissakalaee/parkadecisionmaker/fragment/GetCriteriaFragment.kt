@@ -28,7 +28,7 @@ class GetCriteriaFragment : Fragment() {
             criteria[2] = binding.edtParameter3.text?.toString() ?: ""
             criteria[3] = binding.edtParameter4.text?.toString() ?: ""
             criteria[4] = binding.edtParameter5.text?.toString() ?: ""
-            view.findNavController().navigate(R.id.action_getCriteriaFragment_to_prioritizeAlternativesFragment)
+            view.findNavController().navigate(GetCriteriaFragmentDirections.actionGetCriteriaFragmentToPrioritizeAlternativesFragment())
         }
         binding.btnCancelDialogGetCriteria.setOnClickListener {
             binding.edtParameter1.setText("")

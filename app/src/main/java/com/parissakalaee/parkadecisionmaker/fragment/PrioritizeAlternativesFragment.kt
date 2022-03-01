@@ -74,7 +74,7 @@ class PrioritizeAlternativesFragment : Fragment() {
                     (5 - alternativePriorityValue[i][j]).toInt()
                 )
             }
-            view.findNavController().navigate(R.id.action_prioritizeAlternativesFragment_to_calculatorFragment)
+            view.findNavController().navigate(PrioritizeAlternativesFragmentDirections.actionPrioritizeAlternativesFragmentToCalculatorFragment())
         }
         binding.btnCancelDialogPrioritizeAlternatives.setOnClickListener {
             val prefsEditor = PreferenceManager.getDefaultSharedPreferences(activity).edit()
