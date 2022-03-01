@@ -8,4 +8,8 @@
         android:id="@+id/aboutFragment"
         android:icon="@drawable/vector_dice_6"
         android:title="@string/all_menu_about" />
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/settings"
+        android:title="@string/all_menu_settings" />
 </menu>

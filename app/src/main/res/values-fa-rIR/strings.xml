@@ -46,5 +46,8 @@
     <string name="all_menu_about">درباره ما</string>
     <string name="all_menu_rules">قوانین</string>
     <string name="all_menu_share">اشتراک گذاری</string>
+    <string name="all_menu_settings">تنظیمات</string>
+    <string name="language_fragment_english">English</string>
+    <string name="language_fragment_farsi">فارسی</string>
 
 </resources>

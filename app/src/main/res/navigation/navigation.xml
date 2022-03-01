@@ -53,4 +53,14 @@
             android:id="@+id/action_prioritizeAlternativesFragment_to_calculatorFragment"
             app:destination="@id/calculatorFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.fragment.PrioritizeAlternativesFragment"
+        android:label="PrioritizeAlternativesFragment"
+        tools:layout="@layout/fragment_prioritize_alternatives">
+        <action
+            android:id="@+id/action_prioritizeAlternativesFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
+    </fragment>
+
 </navigation>
