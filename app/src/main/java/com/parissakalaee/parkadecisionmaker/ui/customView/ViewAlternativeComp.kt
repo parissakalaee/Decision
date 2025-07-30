@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.ui.customView
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,12 +8,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
+import com.parissakalaee.parkadecisionmaker.R
+import com.parissakalaee.parkadecisionmaker.databinding.ViewCompareAlternativesBinding
+import com.parissakalaee.parkadecisionmaker.util.Constants.ARRAY_SIZE
 import java.util.*
 
 class ViewAlternativeComp : LinearLayout {
-    var txtParameter: TextView? = null
-    var txtAlt: Array<TextView?> = arrayOfNulls(CalculatorFragment.ARRAY_SIZE)
-    var spinner: Array<Spinner?> = arrayOfNulls(CalculatorFragment.ARRAY_SIZE)
+    private var _binding: ViewCompareAlternativesBinding? = null
+    private val binding get() = _binding!!
+
+    private var txtParameter: TextView? = null
+    var txtAlt: Array<TextView?> = arrayOfNulls(ARRAY_SIZE)
+    private var spinner: Array<Spinner?> = arrayOfNulls(ARRAY_SIZE)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         initializer(context)
@@ -23,39 +29,37 @@ class ViewAlternativeComp : LinearLayout {
         initializer(context)
     }
 
-    var alternativeItem: DoubleArray = DoubleArray(CalculatorFragment.ARRAY_SIZE)
-    var indexSpinner: Int = 0
+    var alternativeItem: DoubleArray = DoubleArray(ARRAY_SIZE)
+    private var indexSpinner: Int = 0
     private fun initializer(context: Context) {
-        if (isInEditMode()) {
+        if (isInEditMode) {
             return
         }
-        val inflator: LayoutInflater =
-            context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val layout: View = inflator.inflate(R.layout.view_compare_alternatives, this)
-        val list: MutableList<String> = ArrayList()
-        list.add("عالی")
-        list.add("بسیار خوب")
-        list.add("خوب")
-        list.add("متوسط")
-        list.add("بد")
+        _binding = ViewCompareAlternativesBinding.inflate(LayoutInflater.from(context), this, false)
+
+        val list = ArrayList<String>()
+        list.add(context.getString(R.string.all_msg_excellent))
+        list.add(context.getString(R.string.all_msg_very_good))
+        list.add(context.getString(R.string.all_msg_good))
+        list.add(context.getString(R.string.all_msg_so_so))
+        list.add(context.getString(R.string.all_msg_bad))
         val dataAdapter: ArrayAdapter<String> = ArrayAdapter(
             context,
-            R.layout.item_spinner, list
+            R.layout.item_spinner,
+            list
         )
         dataAdapter.setDropDownViewResource(R.layout.item_spinner_dropdown)
-        spinner[0] = layout.findViewById<View>(R.id.spinner2) as Spinner?
-        spinner[1] = layout.findViewById<View>(R.id.spinner3) as Spinner?
-        spinner[2] = layout.findViewById<View>(R.id.spinner4) as Spinner?
-        spinner[3] = layout.findViewById<View>(R.id.spinner5) as Spinner?
-        spinner[4] = layout.findViewById<View>(R.id.spinner6) as Spinner?
-        for (i in 0 until CalculatorFragment.ARRAY_SIZE) spinner.get(i)!!
-            .setAdapter(dataAdapter)
-        spinner.get(0)!!.setOnItemSelectedListener(object : OnItemSelectedListener {
-            public override fun onItemSelected(
+        spinner[0] = binding.spinner2
+        spinner[1] = binding.spinner3
+        spinner[2] = binding.spinner4
+        spinner[3] = binding.spinner5
+        spinner[4] = binding.spinner6
+        for (i in 0 until ARRAY_SIZE) spinner[i]!!.adapter = dataAdapter
+        spinner[0]!!.onItemSelectedListener = object : OnItemSelectedListener {
+            override fun onItemSelected(
                 parent: AdapterView<*>, view: View,
                 pos: Int, id: Long
             ) {
-                // TODO Auto-generated method stub
                 alternativeItem[0] = parent.getItemIdAtPosition(pos).toDouble()
                 when (parent.getItemIdAtPosition(pos).toInt()) {
                     0 -> alternativeItem[0] = 5.0
@@ -66,16 +70,14 @@ class ViewAlternativeComp : LinearLayout {
                 }
             }
 
-            public override fun onNothingSelected(arg0: AdapterView<*>?) {
-                // TODO Auto-generated method stub
+            override fun onNothingSelected(arg0: AdapterView<*>?) {
             }
-        })
-        spinner.get(1)!!.setOnItemSelectedListener(object : OnItemSelectedListener {
-            public override fun onItemSelected(
+        }
+        spinner[1]!!.onItemSelectedListener = object : OnItemSelectedListener {
+            override fun onItemSelected(
                 parent: AdapterView<*>, view: View,
                 pos: Int, id: Long
             ) {
-                // TODO Auto-generated method stub
                 alternativeItem[1] = parent.getItemIdAtPosition(pos).toDouble()
                 when (parent.getItemIdAtPosition(pos).toInt()) {
                     0 -> alternativeItem[1] = 5.0
@@ -86,16 +88,14 @@ class ViewAlternativeComp : LinearLayout {
                 }
             }
 
-            public override fun onNothingSelected(arg0: AdapterView<*>?) {
-                // TODO Auto-generated method stub
+            override fun onNothingSelected(arg0: AdapterView<*>?) {
             }
-        })
-        spinner.get(2)!!.setOnItemSelectedListener(object : OnItemSelectedListener {
-            public override fun onItemSelected(
+        }
+        spinner[2]!!.onItemSelectedListener = object : OnItemSelectedListener {
+            override fun onItemSelected(
                 parent: AdapterView<*>, view: View,
                 pos: Int, id: Long
             ) {
-                // TODO Auto-generated method stub
                 alternativeItem[2] = parent.getItemIdAtPosition(pos).toDouble()
                 when (parent.getItemIdAtPosition(pos).toInt()) {
                     0 -> alternativeItem[2] = 5.0
@@ -106,16 +106,14 @@ class ViewAlternativeComp : LinearLayout {
                 }
             }
 
-            public override fun onNothingSelected(arg0: AdapterView<*>?) {
-                // TODO Auto-generated method stub
+            override fun onNothingSelected(arg0: AdapterView<*>?) {
             }
-        })
-        spinner.get(3)!!.setOnItemSelectedListener(object : OnItemSelectedListener {
-            public override fun onItemSelected(
+        }
+        spinner[3]!!.onItemSelectedListener = object : OnItemSelectedListener {
+            override fun onItemSelected(
                 parent: AdapterView<*>, view: View,
                 pos: Int, id: Long
             ) {
-                // TODO Auto-generated method stub
                 alternativeItem[3] = parent.getItemIdAtPosition(pos).toDouble()
                 when (parent.getItemIdAtPosition(pos).toInt()) {
                     0 -> alternativeItem[3] = 5.0
@@ -126,16 +124,14 @@ class ViewAlternativeComp : LinearLayout {
                 }
             }
 
-            public override fun onNothingSelected(arg0: AdapterView<*>?) {
-                // TODO Auto-generated method stub
+            override fun onNothingSelected(arg0: AdapterView<*>?) {
             }
-        })
-        spinner.get(4)!!.setOnItemSelectedListener(object : OnItemSelectedListener {
-            public override fun onItemSelected(
+        }
+        spinner[4]!!.onItemSelectedListener = object : OnItemSelectedListener {
+            override fun onItemSelected(
                 parent: AdapterView<*>, view: View,
                 pos: Int, id: Long
             ) {
-                // TODO Auto-generated method stub
                 alternativeItem[4] = parent.getItemIdAtPosition(pos).toDouble()
                 when (parent.getItemIdAtPosition(pos).toInt()) {
                     0 -> alternativeItem[4] = 5.0
@@ -146,27 +142,25 @@ class ViewAlternativeComp : LinearLayout {
                 }
             }
 
-            public override fun onNothingSelected(arg0: AdapterView<*>?) {
-                // TODO Auto-generated method stub
+            override fun onNothingSelected(arg0: AdapterView<*>?) {
             }
-        })
-        txtParameter = layout.findViewById<View>(R.id.txtParameter) as TextView?
-        txtAlt[0] = layout.findViewById<View>(R.id.txtAlt1) as TextView?
-        txtAlt[1] = layout.findViewById<View>(R.id.txtAlt2) as TextView?
-        txtAlt[2] = layout.findViewById<View>(R.id.txtAlt3) as TextView?
-        txtAlt[3] = layout.findViewById<View>(R.id.txtAlt4) as TextView?
-        txtAlt[4] = layout.findViewById<View>(R.id.txtAlt5) as TextView?
+        }
+        txtParameter = binding.txtParameter
+        txtAlt[0] = binding.txtAlt1
+        txtAlt[1] = binding.txtAlt2
+        txtAlt[2] = binding.txtAlt3
+        txtAlt[3] = binding.txtAlt4
+        txtAlt[4] = binding.txtAlt5
     }
 
     fun setAltText(param: String?, input: Array<String>) {
-        txtParameter!!.setText(param)
-        for (i in 0 until CalculatorFragment.ARRAY_SIZE) txtAlt.get(i)!!
-            .setText(input.get(i))
+        txtParameter!!.text = param
+        for (i in 0 until ARRAY_SIZE) txtAlt[i]!!.text = input[i]
     }
 
     fun setVisibilityText(number: Int) {
-        txtAlt.get(number)!!.setVisibility(GONE)
-        spinner.get(number)!!.setVisibility(GONE)
+        txtAlt[number]!!.visibility = GONE
+        spinner[number]!!.visibility = GONE
     }
 
     fun getMyAlternativeItem(): DoubleArray {
@@ -174,24 +168,19 @@ class ViewAlternativeComp : LinearLayout {
     }
 
     fun getID(input: Int) {
-        var spinnerValue: Int = 0
+        var spinnerValue: Int
         indexSpinner = input
         val sharedPref: SharedPreferences =
             PreferenceManager.getDefaultSharedPreferences(getContext())
         for (i in 0..4) {
-            spinnerValue = sharedPref.getInt(spinnerAlterSelection.get(indexSpinner).get(i), 5)
-            if (spinnerValue != 5) spinner.get(i)!!.setSelection(spinnerValue)
+            spinnerValue = sharedPref.getInt(spinnerAlterSelection[indexSpinner][i], 5)
+            if (spinnerValue != 5) spinner[i]!!.setSelection(spinnerValue)
         }
     }
 
-    fun clearID(input: Int) {
-        val sharedPref: SharedPreferences =
-            PreferenceManager.getDefaultSharedPreferences(getContext())
+    fun clearID() {
         for (i in 0..4) {
-            val prefsEditor: SharedPreferences.Editor =
-                PreferenceManager.getDefaultSharedPreferences(getContext()).edit()
-            prefsEditor.putInt(spinnerAlterSelection.get(input).get(i), 0).commit()
-            spinner.get(i)!!.setSelection(0)
+            spinner[i]!!.setSelection(0)
         }
     }
 
@@ -203,5 +192,6 @@ class ViewAlternativeComp : LinearLayout {
             arrayOf("Alter15", "Alter16", "Alter17", "Alter18", "Alter19"),
             arrayOf("Alter20", "Alter21", "Alter22", "Alter23", "Alter24")
         )
+        private const val TAG = "Custom_View_Kotlin"
     }
 }

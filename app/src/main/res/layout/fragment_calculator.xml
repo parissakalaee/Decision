@@ -18,7 +18,7 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
-            android:contentDescription="@string/calculator_desc_dobblesteen"
+            android:contentDescription="@string/calculator_desc_dice"
             app:srcCompat="@drawable/vector_empty_dice"
             tools:srcCompat="@drawable/vector_dice_1" />
 

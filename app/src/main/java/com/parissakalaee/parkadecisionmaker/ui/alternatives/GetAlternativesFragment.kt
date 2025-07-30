@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.ui.alternatives
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.parissakalaee.parkadecisionmaker.R
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentGetAlternativesBinding
 
 class GetAlternativesFragment : Fragment() {
@@ -27,7 +28,7 @@ class GetAlternativesFragment : Fragment() {
             alternatives[2] = binding.edtAlternative3.text?.toString() ?: ""
             alternatives[3] = binding.edtAlternative4.text?.toString() ?: ""
             alternatives[4] = binding.edtAlternative5.text?.toString() ?: ""
-            view.findNavController().navigate(R.id.action_getAlternativesFragment_to_getCriteriaFragment)
+            view.findNavController().navigate(GetAlternativesFragmentDirections.actionGetAlternativesFragmentToGetCriteriaFragment())
         }
         binding.btnCancelDialogGetAlternatives.setOnClickListener {
             binding.edtAlternative1.setText("")
@@ -42,5 +43,10 @@ class GetAlternativesFragment : Fragment() {
             alternatives[4] = ""
         }
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

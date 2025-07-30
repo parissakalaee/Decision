@@ -1,6 +1,6 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Base application theme. -->
+    <!-- Base application theme with window insets compatibility -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -9,6 +9,15 @@
         <item name="fontFamily">@font/yekan</item>
         <item name="android:textColorPrimary">@color/textColorPrimary</item>
         <item name="android:textSize">@dimen/textsize_medium</item>
+        <!-- Window insets compatibility -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+    
+    <!-- Theme for API 16+ with additional compatibility -->
+    <style name="AppTheme.Api16Compat" parent="AppTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="EditTextCustomized">

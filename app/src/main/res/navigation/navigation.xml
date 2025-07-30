@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/calculatorFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.CalculatorFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.calculator.CalculatorFragment"
         android:label="CalculatorFragment"
         tools:layout="@layout/fragment_calculator">
         <action
@@ -16,10 +16,13 @@
         <action
             android:id="@+id/action_calculatorFragment_to_getCriteriaFragment"
             app:destination="@id/getCriteriaFragment" />
+        <action
+            android:id="@+id/action_calculatorFragment_to_prioritizeAlternativesFragment"
+            app:destination="@id/prioritizeAlternativesFragment" />
     </fragment>
     <fragment
         android:id="@+id/getAlternativesFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.GetAlternativesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.alternatives.GetAlternativesFragment"
         android:label="GetAlternativesFragment"
         tools:layout="@layout/fragment_get_alternatives">
         <action
@@ -31,11 +34,41 @@
     </fragment>
     <fragment
         android:id="@+id/getCriteriaFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.GetCriteriaFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.criteria.GetCriteriaFragment"
         android:label="GetCriteriaFragment"
         tools:layout="@layout/fragment_get_criteria">
         <action
             android:id="@+id/action_getCriteriaFragment_to_calculatorFragment"
             app:destination="@id/calculatorFragment" />
+        <action
+            android:id="@+id/action_getCriteriaFragment_to_prioritizeAlternativesFragment"
+            app:destination="@id/prioritizeAlternativesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/prioritizeAlternativesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.prioritize.PrioritizeAlternativesFragment"
+        android:label="PrioritizeAlternativesFragment"
+        tools:layout="@layout/fragment_prioritize_alternatives">
+        <action
+            android:id="@+id/action_prioritizeAlternativesFragment_to_calculatorFragment"
+            app:destination="@id/calculatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+    
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.help.HelpFragment"
+        android:label="HelpFragment"
+        tools:layout="@layout/fragment_help"/>
+    
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.faq.FaqFragment"
+        android:label="FaqFragment"
+        tools:layout="@layout/fragment_faq"/>
+
 </navigation>

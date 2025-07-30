@@ -1,18 +1,12 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.ui.criteria
 
-import android.app.Dialog
 import android.os.Bundle
-import android.preference.PreferenceManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.navigation.findNavController
-import com.parissakalaee.parkadecisionmaker.databinding.FragmentGetAlternativesBinding
+import com.parissakalaee.parkadecisionmaker.R
 import com.parissakalaee.parkadecisionmaker.databinding.FragmentGetCriteriaBinding
 
 class GetCriteriaFragment : Fragment() {
@@ -34,7 +28,7 @@ class GetCriteriaFragment : Fragment() {
             criteria[2] = binding.edtParameter3.text?.toString() ?: ""
             criteria[3] = binding.edtParameter4.text?.toString() ?: ""
             criteria[4] = binding.edtParameter5.text?.toString() ?: ""
-            view.findNavController().navigate(R.id.action_getCriteriaFragment_to_calculatorFragment)
+            view.findNavController().navigate(GetCriteriaFragmentDirections.actionGetCriteriaFragmentToPrioritizeAlternativesFragment())
         }
         binding.btnCancelDialogGetCriteria.setOnClickListener {
             binding.edtParameter1.setText("")
@@ -49,5 +43,10 @@ class GetCriteriaFragment : Fragment() {
             criteria[4] = ""
         }
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

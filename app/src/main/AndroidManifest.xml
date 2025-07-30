@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.parissakalaee.parkadecisionmaker"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <application
         android:allowBackup="true"
+        android:name=".ParkaDecisionMakerApplication"
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:exported="true"
-            android:name="com.parissakalaee.parkadecisionmaker.MainActivity">
+            android:name="com.parissakalaee.parkadecisionmaker.ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

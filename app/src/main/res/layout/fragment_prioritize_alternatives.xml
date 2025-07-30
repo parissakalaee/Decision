@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        style="@style/MessageScrollBar" >
+
+        <LinearLayout style="@style/MessageLayout" >
+            <TextView
+                android:id="@+id/textViewDialogPrioritizeAlternatives"
+                style="@style/MessageTextView"
+                android:text="@string/prioritize_alternatives_dialog_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
+                    android:id="@+id/viewAlternativeComp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
+
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
+                    android:id="@+id/viewAlternativeComp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
+
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
+                    android:id="@+id/viewAlternativeComp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
+
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
+                    android:id="@+id/viewAlternativeComp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
+
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
+                    android:id="@+id/viewAlternativeComp5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout style="@style/ButtonLayout">
+
+                <Button
+                    android:id="@+id/btnOkDialogPrioritizeAlternatives"
+                    style="@style/YesNoButton"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="272dp"
+                    android:text="@string/all_action_ok"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnCancelDialogPrioritizeAlternatives"
+                    app:layout_constraintTop_toTopOf="@id/btnCancelDialogPrioritizeAlternatives" />
+
+                <Button
+                    android:id="@+id/btnCancelDialogPrioritizeAlternatives"
+                    style="@style/YesNoButton"
+                    android:text="@string/all_action_clear"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
