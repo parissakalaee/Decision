@@ -1,11 +1,13 @@
 package com.parissakalaee.parkadecisionmaker
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
+@HiltAndroidApp
 class ParkaDecisionMakerApplication : Application() {
     override fun onCreate() {
-        Timber.plant(Timber.DebugTree())
         super.onCreate()
+        Timber.plant(Timber.DebugTree())
     }
 }

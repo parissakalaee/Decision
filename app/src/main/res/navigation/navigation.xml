@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/calculatorFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.fragment.CalculatorFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.calculator.CalculatorFragment"
         android:label="CalculatorFragment"
         tools:layout="@layout/fragment_calculator">
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/getAlternativesFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.fragment.GetAlternativesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.alternatives.GetAlternativesFragment"
         android:label="GetAlternativesFragment"
         tools:layout="@layout/fragment_get_alternatives">
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/getCriteriaFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.fragment.GetCriteriaFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.criteria.GetCriteriaFragment"
         android:label="GetCriteriaFragment"
         tools:layout="@layout/fragment_get_criteria">
         <action
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/prioritizeAlternativesFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.fragment.PrioritizeAlternativesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.prioritize.PrioritizeAlternativesFragment"
         android:label="PrioritizeAlternativesFragment"
         tools:layout="@layout/fragment_prioritize_alternatives">
         <action
@@ -55,8 +55,20 @@
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.parissakalaee.parkadecisionmaker.fragment.SettingsFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.settings.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings"/>
+    
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.help.HelpFragment"
+        android:label="HelpFragment"
+        tools:layout="@layout/fragment_help"/>
+    
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.parissakalaee.parkadecisionmaker.ui.faq.FaqFragment"
+        android:label="FaqFragment"
+        tools:layout="@layout/fragment_faq"/>
 
 </navigation>

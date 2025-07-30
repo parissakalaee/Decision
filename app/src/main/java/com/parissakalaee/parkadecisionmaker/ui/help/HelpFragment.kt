@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker.fragment
+package com.parissakalaee.parkadecisionmaker.ui.help
 
 import android.os.Bundle
 import android.util.TypedValue

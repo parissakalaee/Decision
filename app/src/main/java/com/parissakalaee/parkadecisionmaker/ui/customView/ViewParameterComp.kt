@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.ui.customView
 
 import android.content.Context
 import android.preference.PreferenceManager
@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
+import com.parissakalaee.parkadecisionmaker.R
 import java.util.*
 
 class ViewParameterComp : LinearLayout {

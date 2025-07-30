@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -9,9 +9,13 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import com.parissakalaee.parkadecisionmaker.R
 import com.parissakalaee.parkadecisionmaker.databinding.ActivityMainBinding
+import com.parissakalaee.parkadecisionmaker.util.WindowInsetsHelper
+import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -34,6 +38,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         NavigationUI.setupWithNavController(binding.navView, navController)
+        
+        // Apply window insets handling for API 16+ compatibility
+        WindowInsetsHelper.setupDrawerLayoutInsets(drawerLayout)
+        
+        // Additional setup for main content area
+        val mainContent = binding.mainContent
+        WindowInsetsHelper.applyWindowInsets(window, mainContent)
     }
 
     override fun onSupportNavigateUp(): Boolean {

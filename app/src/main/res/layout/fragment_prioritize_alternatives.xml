@@ -17,40 +17,40 @@
                 android:gravity="center"
                 android:orientation="vertical" >
 
-                <com.parissakalaee.parkadecisionmaker.ViewAlternativeComp
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
                     android:id="@+id/viewAlternativeComp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center" >
-                </com.parissakalaee.parkadecisionmaker.ViewAlternativeComp>
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
 
-                <com.parissakalaee.parkadecisionmaker.ViewAlternativeComp
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
                     android:id="@+id/viewAlternativeComp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center" >
-                </com.parissakalaee.parkadecisionmaker.ViewAlternativeComp>
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
 
-                <com.parissakalaee.parkadecisionmaker.ViewAlternativeComp
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
                     android:id="@+id/viewAlternativeComp3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center" >
-                </com.parissakalaee.parkadecisionmaker.ViewAlternativeComp>
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
 
-                <com.parissakalaee.parkadecisionmaker.ViewAlternativeComp
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
                     android:id="@+id/viewAlternativeComp4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center" >
-                </com.parissakalaee.parkadecisionmaker.ViewAlternativeComp>
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
 
-                <com.parissakalaee.parkadecisionmaker.ViewAlternativeComp
+                <com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp
                     android:id="@+id/viewAlternativeComp5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center" >
-                </com.parissakalaee.parkadecisionmaker.ViewAlternativeComp>
+                </com.parissakalaee.parkadecisionmaker.ui.customView.ViewAlternativeComp>
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout style="@style/ButtonLayout">

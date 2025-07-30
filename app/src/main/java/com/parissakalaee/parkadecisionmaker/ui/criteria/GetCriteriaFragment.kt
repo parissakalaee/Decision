@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker.fragment
+package com.parissakalaee.parkadecisionmaker.ui.criteria
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

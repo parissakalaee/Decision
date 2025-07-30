@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker.fragment
+package com.parissakalaee.parkadecisionmaker.ui.settings
 
 import android.os.Bundle
 import android.preference.PreferenceManager

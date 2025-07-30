@@ -1,4 +1,4 @@
-package com.parissakalaee.parkadecisionmaker
+package com.parissakalaee.parkadecisionmaker.ui.customView
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -8,8 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
+import com.parissakalaee.parkadecisionmaker.R
 import com.parissakalaee.parkadecisionmaker.databinding.ViewCompareAlternativesBinding
-import com.parissakalaee.parkadecisionmaker.fragment.CalculatorFragment
+import com.parissakalaee.parkadecisionmaker.util.Constants.ARRAY_SIZE
 import java.util.*
 
 class ViewAlternativeComp : LinearLayout {
@@ -17,8 +18,8 @@ class ViewAlternativeComp : LinearLayout {
     private val binding get() = _binding!!
 
     private var txtParameter: TextView? = null
-    var txtAlt: Array<TextView?> = arrayOfNulls(CalculatorFragment.ARRAY_SIZE)
-    private var spinner: Array<Spinner?> = arrayOfNulls(CalculatorFragment.ARRAY_SIZE)
+    var txtAlt: Array<TextView?> = arrayOfNulls(ARRAY_SIZE)
+    private var spinner: Array<Spinner?> = arrayOfNulls(ARRAY_SIZE)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         initializer(context)
@@ -28,7 +29,7 @@ class ViewAlternativeComp : LinearLayout {
         initializer(context)
     }
 
-    var alternativeItem: DoubleArray = DoubleArray(CalculatorFragment.ARRAY_SIZE)
+    var alternativeItem: DoubleArray = DoubleArray(ARRAY_SIZE)
     private var indexSpinner: Int = 0
     private fun initializer(context: Context) {
         if (isInEditMode) {
@@ -53,7 +54,7 @@ class ViewAlternativeComp : LinearLayout {
         spinner[2] = binding.spinner4
         spinner[3] = binding.spinner5
         spinner[4] = binding.spinner6
-        for (i in 0 until CalculatorFragment.ARRAY_SIZE) spinner[i]!!.adapter = dataAdapter
+        for (i in 0 until ARRAY_SIZE) spinner[i]!!.adapter = dataAdapter
         spinner[0]!!.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>, view: View,
@@ -154,7 +155,7 @@ class ViewAlternativeComp : LinearLayout {
 
     fun setAltText(param: String?, input: Array<String>) {
         txtParameter!!.text = param
-        for (i in 0 until CalculatorFragment.ARRAY_SIZE) txtAlt[i]!!.text = input[i]
+        for (i in 0 until ARRAY_SIZE) txtAlt[i]!!.text = input[i]
     }
 
     fun setVisibilityText(number: Int) {
