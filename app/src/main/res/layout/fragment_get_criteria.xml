@@ -7,53 +7,124 @@
             type="ArrayList&lt;String&gt;" />
     </data>
 <ScrollView
-    style="@style/MessageScrollBar">
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbarSize="4dp"
+    android:scrollbarThumbVertical="@drawable/shape_bg_scrollbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
 
-    <LinearLayout style="@style/MessageLayout" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?attr/colorSurface" >
 
         <TextView
-            style="@style/MessageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:text="@string/get_criteria_fragment_title"/>
         <EditText
             android:id="@+id/edtParameter1"
-            style="@style/EditTextCustomized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:background="@drawable/shape_bg_edt_white"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_margin="4dp"
             android:hint="@string/get_criteria_hint_criterion1"
             android:text="@={criteria[0]}"/>
 
         <EditText
             android:id="@+id/edtParameter2"
-            style="@style/EditTextCustomized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:background="@drawable/shape_bg_edt_white"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_margin="4dp"
             android:hint="@string/get_criteria_hint_criterion2"
             android:text="@={criteria[1]}"/>
 
         <EditText
             android:id="@+id/edtParameter3"
-            style="@style/EditTextCustomized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:background="@drawable/shape_bg_edt_white"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_margin="4dp"
             android:hint="@string/get_criteria_hint_criterion3"
             android:text="@={criteria[2]}"/>
 
         <EditText
             android:id="@+id/edtParameter4"
-            style="@style/EditTextCustomized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:background="@drawable/shape_bg_edt_white"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_margin="4dp"
             android:hint="@string/get_criteria_hint_criterion4"
             android:text="@={criteria[3]}"/>
 
         <EditText
             android:id="@+id/edtParameter5"
-            style="@style/EditTextCustomized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:background="@drawable/shape_bg_edt_white"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_margin="4dp"
             android:hint="@string/get_criteria_hint_criterion5"
             android:text="@={criteria[4]}"/>
 
-        <LinearLayout style="@style/ButtonLayout" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp" >
 
             <Button
                 android:id="@+id/btnCancelDialogGetCriteria"
-                style="@style/YesNoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:background="@drawable/selector_btn_mantis"
+                android:fontFamily="@font/opensans_semibold"
                 android:text="@string/all_action_clear" />
 
             <Button
                 android:id="@+id/btnOKDialogGetCriteria"
-                style="@style/YesNoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:background="@drawable/selector_btn_mantis"
+                android:fontFamily="@font/opensans_semibold"
                 android:text="@string/all_action_ok" />
         </LinearLayout>
     </LinearLayout>

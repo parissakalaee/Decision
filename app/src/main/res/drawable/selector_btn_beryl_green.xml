@@ -3,29 +3,29 @@
      <item android:state_pressed="true" >
          <shape android:shape="rectangle"  >
              <corners android:radius="3dip" />
-             <stroke android:width="4dip" android:color="@color/mantis" />
-             <gradient  android:angle="-90"  android:startColor="@color/bud" android:endColor="@color/grey_nurse"  />
+             <stroke android:width="4dip" android:color="?attr/colorPrimary" />
+             <gradient  android:angle="-90"  android:startColor="?attr/colorPrimaryContainer" android:endColor="?attr/colorSurfaceVariant"  />
          </shape>
      </item>
     <item android:state_focused="true">
          <shape android:shape="rectangle"  >
              <corners android:radius="3dip" />
-             <stroke android:width="4dp" android:color="@color/mantis" />
-             <solid  android:color="@color/grey_nurse"/>
+             <stroke android:width="4dp" android:color="?attr/colorPrimary" />
+             <solid  android:color="?attr/colorSurfaceVariant"/>
          </shape>
      </item>  
     <item android:state_enabled="false">
         <shape android:shape="rectangle"  >
               <corners android:radius="3dip" />
-             <stroke android:width="4dp" android:color="@color/mantis" />
-             <solid  android:color="@color/grey_nurse"/>
+             <stroke android:width="4dp" android:color="?attr/colorPrimary" />
+             <solid  android:color="?attr/colorSurfaceVariant"/>
         </shape>
      </item>
     <item android:state_enabled="true">
              <shape android:shape="rectangle"  >
              <corners android:radius="4dp" />
-             <stroke android:width="4dp" android:color="@color/mantis" />
-             <gradient  android:angle="-90"  android:startColor="@android:color/white" android:endColor="@color/grey_nurse" />
+             <stroke android:width="4dp" android:color="?attr/colorPrimary" />
+             <gradient  android:angle="-90"  android:startColor="@android:color/white" android:endColor="?attr/colorSurfaceVariant" />
          </shape>
      </item>
 </selector>

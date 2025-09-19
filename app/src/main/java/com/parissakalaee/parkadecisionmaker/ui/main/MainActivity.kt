@@ -24,9 +24,13 @@ class MainActivity : AppCompatActivity() {
         val binding =
             DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         drawerLayout = binding.drawerLayout
+        
+        // Set up the toolbar as ActionBar
+        setSupportActionBar(binding.toolbar)
+        
         val navController = this.findNavController(R.id.myNavHostFragment)
-//        NavigationUI.setupActionBarWithNavController(this, navController)
-
+        
+        // Setup ActionBar with navigation drawer
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         // prevent nav gesture if not on start destination

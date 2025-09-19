@@ -4,30 +4,30 @@
     <item android:state_pressed="true"><shape android:shape="rectangle">
             <corners android:radius="5dip" />
 
-            <stroke android:width="2dip" android:color="@color/mantis" />
+            <stroke android:width="2dip" android:color="?attr/colorPrimary" />
 
-            <gradient android:angle="-90" android:endColor="@color/mantis" android:startColor="@color/mantis_dark" />
+            <gradient android:angle="-90" android:endColor="?attr/colorPrimary" android:startColor="?attr/colorPrimaryContainer" />
         </shape></item>
     <item android:state_focused="true"><shape android:shape="rectangle">
             <corners android:radius="5dip" />
 
-            <stroke android:width="1dip" android:color="@color/mantis" />
+            <stroke android:width="1dip" android:color="?attr/colorPrimary" />
 
-            <solid android:color="@color/mantis" />
+            <solid android:color="?attr/colorPrimary" />
         </shape></item>
     <item android:state_enabled="true"><shape android:shape="rectangle">
             <corners android:radius="5dip" />
 
-            <stroke android:width="1dip" android:color="@color/mantis" />
+            <stroke android:width="1dip" android:color="?attr/colorPrimary" />
 
-            <gradient android:angle="-90" android:endColor="@color/mantis" android:startColor="@color/mantis_light" />
+            <gradient android:angle="-90" android:endColor="?attr/colorPrimary" android:startColor="?attr/colorPrimaryContainer" />
         </shape></item>
     <item android:state_enabled="false"><shape android:shape="rectangle">
             <corners android:radius="5dip" />
 
-            <stroke android:width="1dip" android:color="@color/beryl_green" />
+            <stroke android:width="1dip" android:color="?attr/colorOutline" />
 
-            <solid android:color="@color/grey_nurse" />
+            <solid android:color="?attr/colorSurfaceVariant" />
         </shape></item>
 
 </selector>

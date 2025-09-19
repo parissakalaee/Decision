@@ -1,108 +1,46 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!-- Base application theme with window insets compatibility -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="fontFamily">@font/yekan</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textSize">@dimen/textsize_medium</item>
-        <!-- Window insets compatibility -->
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:fitsSystemWindows">false</item>
-    </style>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Simple Material 3 compatible styles -->
     
-    <!-- Theme for API 16+ with additional compatibility -->
-    <style name="AppTheme.Api16Compat" parent="AppTheme">
-        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+    <!-- Material 3 Alert Dialog styles -->
+    <style name="AlertDialog.TitleText" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 
-    <style name="EditTextCustomized">
-        <item name="android:background">@drawable/shape_bg_edt_white</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:clickable">false</item>
-        <item name="android:ems">10</item>
-        <item name="android:gravity">center</item>
-        <item name="android:selectAllOnFocus">true</item>
-        <item name="android:textColorHighlight">@color/dark_golden_rod_40</item>
-        <item name="android:padding">6dp</item>
-        <item name="android:layout_margin">4dp</item>
+    <style name="AlertDialog.BodyText" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 
-    <style name="HelpTextBlack">
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingRight">8dp</item>
-        <item name="android:paddingLeft">8dp</item>
+    <!-- Material 3 Button styles -->
+    <style name="DecisionMaker.Button" parent="Widget.Material3.Button">
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:padding">16dp</item>
     </style>
 
-    <style name="AboutTextBlack">
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">8dp</item>
+    <style name="DecisionMaker.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:fontFamily">@font/opensans_semibold</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:padding">16dp</item>
     </style>
 
-    <style name="ResultTextBlack">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">0.33</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:padding">6dp</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_margin">4dp</item>
-        <item name="android:gravity">center</item>
+    <!-- Material 3 Text Input styles -->
+    <style name="DecisionMaker.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
     </style>
 
-    <style name="YesNoButton">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginLeft">2dp</item>
-        <item name="android:layout_marginRight">2dp</item>
-        <item name="android:background">@drawable/selector_btn_beryl_green</item>
-        <item name="android:textSize">@dimen/textsize_button_medium</item>
+    <!-- Bottom Navigation style -->
+    <style name="DecisionMaker.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">?attr/colorOnPrimary</item>
+        <item name="itemTextColor">?attr/colorOnPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
     </style>
-
-    <style name="ButtonLayout">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginLeft">4dp</item>
-        <item name="android:layout_marginRight">4dp</item>
-        <item name="android:layout_marginTop">6dp</item>
-        <item name="android:layout_marginBottom">6dp</item>
-    </style>
-
-    <style name="MessageTextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_margin">4dp</item>
-        <item name="android:gravity">center</item>
-        <item name="android:padding">4dp</item>
-        <item name="android:textColor">@android:color/black</item>
-    </style>
-
-    <style name="MessageLayout">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/shape_bg_edt_mantis</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:padding">4dp</item>
-    </style>
-
-    <style name="MessageScrollBar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:fadeScrollbars">false</item>
-        <item name="android:scrollbarSize">4dp</item>
-        <item name="android:scrollbarThumbVertical">@drawable/shape_bg_scrollbar</item>
-    </style>
-
 </resources>

@@ -1,11 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Display text styles (from previous image) -->
+    <dimen name="text_display_large_size">55sp</dimen>
+    <dimen name="text_display_medium_size">43sp</dimen>
+    <dimen name="text_display_small_size">34sp</dimen>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="textsize_medium">14sp</dimen>
-    <dimen name="textsize_button_medium">12sp</dimen>
-    <dimen name="textsize_item_medium">16sp</dimen>
+    <!-- Headline text styles (from previous image) -->
+    <dimen name="text_headline_large_size">30sp</dimen>
+    <dimen name="text_headline_medium_size">26sp</dimen>
+    <dimen name="text_headline_small_size">22sp</dimen>
+
+    <!-- Title text styles -->
+    <dimen name="text_title_large_size">20sp</dimen>
+    <dimen name="text_title_medium_size">14sp</dimen>
+    <dimen name="text_title_small_size">12sp</dimen>
+
+    <!-- Label text styles -->
+    <dimen name="text_label_large_size">12sp</dimen>
+    <dimen name="text_label_medium_size">11sp</dimen>
+    <dimen name="text_label_small_size">10sp</dimen>
+
+    <!-- Body text styles -->
+    <dimen name="text_body_large_size">14sp</dimen>
+    <dimen name="text_body_medium_size">12sp</dimen>
+    <dimen name="text_body_small_size">10sp</dimen>
+
+    <!-- Prominent text styles  -->
+    <dimen name="text_large_prominent_size">14sp</dimen>
+    <dimen name="text_medium_prominent_size">12sp</dimen>
+    <dimen name="text_small_prominent_size">10sp</dimen>
+    
+    <!-- Legacy dimensions for backward compatibility -->
     <dimen name="padding_4dp">4dp</dimen>
-    <dimen name="padding_6dp">6dp</dimen>
+    <dimen name="textsize_item_medium">16sp</dimen>
 </resources>

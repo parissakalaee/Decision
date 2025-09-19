@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MessageScrollBar" >
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbarSize="4dp"
+    android:scrollbarThumbVertical="@drawable/shape_bg_scrollbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,7 +15,12 @@
 
         <TextView
             android:id="@+id/txtViewResult"
-            style="@style/MessageTextView" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <LinearLayout
             android:id="@+id/lyt_result1"
@@ -19,19 +29,35 @@
             android:layout_gravity="center"
             android:layout_margin="4dp"
             android:background="@drawable/shape_bg_edt_white"
+            android:orientation="horizontal"
             android:padding="4dp" >
 
             <TextView
                 android:id="@+id/txt_percentage1"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_result1"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_number1"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
         </LinearLayout>
 
         <LinearLayout
@@ -41,19 +67,35 @@
             android:layout_gravity="center"
             android:layout_margin="4dp"
             android:background="@drawable/shape_bg_edt_white"
+            android:orientation="horizontal"
             android:padding="4dp" >
 
             <TextView
                 android:id="@+id/txt_percentage2"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_result2"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_number2"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
         </LinearLayout>
 
         <LinearLayout
@@ -63,19 +105,35 @@
             android:layout_gravity="center"
             android:layout_margin="4dp"
             android:background="@drawable/shape_bg_edt_white"
+            android:orientation="horizontal"
             android:padding="4dp" >
 
             <TextView
                 android:id="@+id/txt_percentage3"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_result3"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_number3"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,19 +143,35 @@
             android:layout_gravity="center"
             android:layout_margin="4dp"
             android:background="@drawable/shape_bg_edt_white"
+            android:orientation="horizontal"
             android:padding="4dp" >
 
             <TextView
                 android:id="@+id/txt_percentage4"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_result4"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_number4"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
         </LinearLayout>
 
         <LinearLayout
@@ -107,26 +181,55 @@
             android:layout_gravity="center"
             android:layout_margin="4dp"
             android:background="@drawable/shape_bg_edt_white"
+            android:orientation="horizontal"
             android:padding="4dp" >
 
             <TextView
                 android:id="@+id/txt_percentage5"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_result5"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
 
             <TextView
                 android:id="@+id/txt_number5"
-                style="@style/ResultTextBlack" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:fontFamily="@font/opensans_regular" />
         </LinearLayout>
 
-        <LinearLayout style="@style/ButtonLayout" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp" >
 
             <Button
                 android:id="@+id/btnOk5"
-                style="@style/YesNoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:background="@drawable/selector_btn_mantis"
+                android:fontFamily="@font/opensans_semibold"
                 android:text="@string/all_action_ok" />
         </LinearLayout>
     </LinearLayout>

@@ -13,8 +13,11 @@
 
         <TextView
             android:id="@+id/txt_helpsubj1"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:background="@drawable/shape_bg_card"
             android:gravity="center"
             android:text="چرا به تصمیم نیاز داریم؟"
@@ -22,43 +25,93 @@
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help00"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help01"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help02"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help03"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help04"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help05"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help06"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help07"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help08"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_help09"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
     </LinearLayout>
 
 </ScrollView>

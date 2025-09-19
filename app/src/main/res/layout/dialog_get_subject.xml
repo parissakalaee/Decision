@@ -15,25 +15,58 @@
         android:padding="4dp" >
     
         <TextView
-            style="@style/MessageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:text="@string/get_subject_dialog_title"/>
 
         <EditText
             android:id="@+id/edtGetSubject"
-            style="@style/EditTextCustomized"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:background="@drawable/shape_bg_edt_white"
+            android:fontFamily="@font/opensans_regular"
+            android:layout_margin="4dp"
             android:hint="@string/get_subject_hint_subject"
             android:text="@={subject}"/>
     
-        <LinearLayout style="@style/ButtonLayout" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp" >
     
             <Button
                 android:id="@+id/btn_clear_dialog_get_subject"
-                style="@style/YesNoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:background="@drawable/selector_btn_mantis"
+                android:fontFamily="@font/opensans_semibold"
                 android:text="@string/all_action_clear" />
     
             <Button
                 android:id="@+id/btn_ok_dialog_get_subject"
-                style="@style/YesNoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:background="@drawable/selector_btn_mantis"
+                android:fontFamily="@font/opensans_semibold"
                 android:text="@string/all_action_ok" />
         </LinearLayout>
     

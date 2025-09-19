@@ -8,5 +8,5 @@
     android:paddingTop="@dimen/padding_4dp"
     android:paddingBottom="@dimen/padding_4dp"
     android:textColor="@android:color/black"
-    android:background="@color/canary"
+    android:background="?attr/colorPrimaryContainer"
     android:textSize="@dimen/textsize_item_medium"/>

@@ -13,206 +13,379 @@
 
         <TextView
             android:id="@+id/txt_FAQsubj1"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:background="@drawable/shape_bg_card"
             android:gravity="center"
-            android:text="ورودی‌های برنامه"
-            android:textSize="18sp" />
+            android:text="ورودی‌های برنامه" />
 
         <TextView
             android:id="@+id/txt_FAQinput1"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="در چه موردی می‌خواهید تصمیم‌گیری کنید؟"
-            android:textSize="16sp" />
+            android:text="در چه موردی می‌خواهید تصمیم‌گیری کنید؟" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ00"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQinput2"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="قرار است بین چه گزینه‌هایی تصمیم‌گیری انجام شود؟"
-            android:textSize="16sp" />
+            android:text="قرار است بین چه گزینه‌هایی تصمیم‌گیری انجام شود؟" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ01"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQinput3"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="در این تصمیم گیری چه پارامترهایی موثر هستند؟"
-            android:textSize="16sp" />
+            android:text="در این تصمیم گیری چه پارامترهایی موثر هستند؟" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ02"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQinput4"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟"
-            android:textSize="16sp" />
+            android:text="از نگاه پارامترهای موثر، به هر کدام از گزینه‌ها چه نمره‌ای می‌دهید؟" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ03"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQinput5"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="در میان پارامترهای موثر، کدامیک مهم تر هستند؟"
-            android:textSize="16sp" />
+            android:text="در میان پارامترهای موثر، کدامیک مهم تر هستند؟" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ04"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQinput6"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="محاسبه کن!"
-            android:textSize="16sp" />
+            android:text="محاسبه کن!" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ05"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQinput7"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="پاک شود"
-            android:textSize="16sp" />
+            android:text="پاک شود" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ06"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQsubj2"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:background="@drawable/shape_bg_card"
             android:gravity="center"
-            android:text="پیغام‌های برنامه"
-            android:textSize="18sp" />
+            android:text="پیغام‌های برنامه" />
 
         <TextView
             android:id="@+id/txt_FAQinput8"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:gravity="center"
-            android:text="لطفاً ورودی‌های برنامه را کامل کنید."
-            android:textSize="16sp" />
+            android:text="لطفاً ورودی‌های برنامه را کامل کنید." />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ07"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_FAQsubj3"
-            style="@style/HelpTextBlack"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular"
             android:background="@drawable/shape_bg_card"
             android:gravity="center"
-            android:text="مثال کاربردی"
-            android:textSize="18sp" />
+            android:text="مثال کاربردی" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ08"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ09"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ10"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ11"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ12"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ13"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ14"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ15"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ16"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ17"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ18"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ19"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ20"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ21"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ22"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ23"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ24"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ25"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ26"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_FAQ27"
-            style="@style/HelpTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
     </LinearLayout>
 
 </ScrollView>

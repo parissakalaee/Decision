@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.parissakalaee.parkadecisionmaker"
-        minSdk 21
+        minSdk 23
         targetSdk 36
         vectorDrawables.useSupportLibrary = true
     }
@@ -41,22 +41,22 @@ android {
 dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
     implementation files('libs/justify.jar')
-    implementation "androidx.core:core-ktx:1.16.0"
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.9.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.9.2'
+    implementation "androidx.core:core-ktx:1.17.0"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.9.4'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.9.4'
     implementation 'com.jakewharton.timber:timber:5.0.1'
-    kapt 'androidx.databinding:databinding-compiler:8.11.1'
     
     // Hilt
-    implementation 'com.google.dagger:hilt-android:2.52'
-    kapt 'com.google.dagger:hilt-compiler:2.52'
+    implementation 'com.google.dagger:hilt-android:2.57.1'
+    kapt 'com.google.dagger:hilt-compiler:2.57.1'
     
     // ViewModel
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.8.7'
-    implementation 'androidx.fragment:fragment-ktx:1.8.5'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.9.4'
+    implementation 'androidx.fragment:fragment-ktx:1.8.9'
     
     // Activity KTX for viewModels()
-    implementation 'androidx.activity:activity-ktx:1.9.3'
+    implementation 'androidx.activity:activity-ktx:1.11.0'
 }

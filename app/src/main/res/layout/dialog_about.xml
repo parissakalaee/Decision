@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MessageScrollBar">
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbarSize="4dp"
+    android:scrollbarThumbVertical="@drawable/shape_bg_scrollbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -10,27 +15,59 @@
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_about1"
-            style="@style/AboutTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_about2"
-            style="@style/AboutTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <ir.noghteh.JustifiedTextView
             android:id="@+id/txt_about3"
-            style="@style/AboutTextBlack" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:fontFamily="@font/opensans_regular" />
 
         <TextView
             android:id="@+id/txt_about4"
-            style="@style/AboutTextBlack"
-            android:text="@string/all_msg_email_address"
-            android:textColor="@android:color/holo_blue_dark" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/all_msg_email_address" />
 
-        <LinearLayout style="@style/ButtonLayout" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp" >
 
             <Button
                 android:id="@+id/btnOk5"
-                style="@style/YesNoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnPrimary"
+                android:background="@drawable/selector_btn_mantis"
+                android:fontFamily="@font/opensans_semibold"
                 android:minHeight="36dip"
                 android:minWidth="56dip"
                 android:text="@string/all_action_ok" />

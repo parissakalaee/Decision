@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Override the main theme for dark mode -->
+    <style name="Theme.DecisionMaker" parent="Base.Theme.DecisionMaker.Dark" />
+</resources>
